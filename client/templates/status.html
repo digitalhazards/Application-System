@@ -2,7 +2,12 @@
     {{> nav}}
     <div class="container">
         <div class="jumbotron">
+          {{#if currentUser}}
+        <p>Logged in. {{> loginButtons}}</p>
+    {{else}}
+          {{> login}}
+    {{/if}}
 
         </div>
-    </div>
+      </div>
 </template>
