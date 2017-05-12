@@ -46,6 +46,17 @@ Template.register.events({
       , ign = t.find('[name=registerIGN]').value
       , password = t.find('[name=registerPassword]').value;
 
+    // Password Logic <div class="alert alert-warning" role="alert">...</div>
+    if (email = ""){
+      $('.errorSpawn').append('<div class="alert alert-warning" role="alert"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp;Email is Empty!</div>');
+    }
+    else if (password = "") {
+      $('.errorSpawn').append('<div class="alert alert-warning" role="alert"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp;Password is Empty!</div>');
+    }
+    else if (ign = "") {
+      $('.errorSpawn').append('<div class="alert alert-warning" role="alert"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp;In Game Name is Empty!</div>');
+    }
+
 
       // Trim and validate the input
 
