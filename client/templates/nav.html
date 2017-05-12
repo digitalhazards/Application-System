@@ -1,16 +1,19 @@
 <template name="nav">
-<div id='cssmenu' class='align-center'>
+<div id='cssmenu' class='align-center container'>
 <ul>
-   <li><a href='index.html'><span>EMPTY</span></a></li>
-   <li class='has-sub last'><a href='#'><span>EMPTY</span></a>
+   <li><a href='/'><span>HOME</span></a></li>
+    <li><a href='#'><span>POSITIONS</span></a></li>
+   <li class='has-sub'><a href='#'><span>APPLY</span></a>
       <ul>
-         <li class='has-sub'><a href='#'><span>EMPTY</span></a>
-            <ul>
-               <li class='last'><a href='#'><span>EMPTY</span></a></li>
-            </ul>
-         </li>
+         <li><a href='#'><span>MEDEVIAL TIMES</span></a></li>
+          <li><a href='#'><span>CRAFTING MAGIC</span></a></li>
+          <li><a href='#'><span>MAGIC REVOLUTION</span></a></li>
+          <li><a href='/networkapplications'><span>NETWORK</span></a></li>
+          <li>{{> loginButtons }}</li>
       </ul>
    </li>
+    <li><a href='/login/'><span>CHECK MY APPLICATION</span></a></li>
 </ul>
 </div>
+    <br/><br/>
 </template>

@@ -3,20 +3,15 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
 
-Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
+// URL Routes
+Router.route('/', function () {
+    this.render('base');
 });
 
-Template.hello.helpers({
-  counter() {
-    return Template.instance().counter.get();
-  },
+Router.route('/status', function () {
+    this.render('status');
 });
 
-Template.hello.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-  },
+Router.route('/networkapplications', function () {
+    this.render('NetworkApplication');
 });

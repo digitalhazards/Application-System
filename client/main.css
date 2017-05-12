@@ -1,1 +1,5 @@
-/* CSS declarations go here */
+body {
+    background: url("/img/bg.jpg");
+    background-position: center;
+    background-repeat: repeat;
+}

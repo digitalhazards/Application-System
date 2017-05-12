@@ -1,10 +1,14 @@
-<head>
-  <title>MC Applications</title>
-  <link href="/assets/nav/nav.css" type="text/css" rel="stylesheet" />
-</head>
+<template name="base">
+    <head>
+        <title>MC Applications</title>
+        <link href="assets/nav/nav.css" type="text/css" rel="stylesheet" />
+        <link href="assets/theme.css" type="text/css" rel="stylesheet" />
+    </head>
 
-<body>
-  {{> nav}}
+    <body>
+        {{> nav}}
+        {{> home}}
+        {{> js}}
+    </body>
 
-  {{> js}}
-</body>
+</template>
