@@ -1,9 +1,12 @@
+<template name="ign">
+  {{ign}}
+</template>
 <template name="myapp">
     {{> nav}}
     <div class="container">
         <div class="jumbotron">
-          {{#if currentUser}}
-        <p>Logged in. {{> loginButtons}}</p>
+    {{#if currentUser}}
+      IGN: {{>ign}}
     {{else}}
           {{> login}}
     {{/if}}
