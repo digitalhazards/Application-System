@@ -5,6 +5,12 @@ Template.ign.helpers({
     return Meteor.user().profile.ign;
   }
 });
+Template.admin.helpers({
+  admin: function() {
+    return Meteor.user().profile.admin;
+  }
+});
+
 
 Template.nav.events({
     'click .logout': function(event){

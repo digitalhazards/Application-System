@@ -6,20 +6,44 @@ import './main.html';
 // URL Routes
 Router.route('/', function () {
     this.render('base');
+    Router.onAfterAction(function() {
+        document.title = 'Home';
+      });
 });
 
-Router.route('/status', function () {
-    this.render('status');
-});
-
-Router.route('/networkapplications', function () {
+Router.route('/apply/network', function () {
     this.render('NetworkApplication');
+    Router.onAfterAction(function () {
+        document.title = "Apply for Network"
+    })
 });
-Router.route('/myapp', function () {
-    this.render('myapp');
+
+Router.route('/me', function () {
+    this.render('me');
+    Router.onAfterAction(function () {
+      document.title = "Me"
+    })
 });
+
 Router.route('/register', function () {
     this.render('register');
+    Router.onAfterAction(function () {
+        document.title = "Register"
+    })
+});
+
+Router.route('/positions', function () {
+    this.render('positions');
+    Router.onAfterAction(function () {
+        document.title = "Positions"
+    })
+});
+
+Router.route('/apply/cm/mod', function () {
+    this.render('CMModApp');
+    Router.onAfterAction(function () {
+        document.title = "CM Mod Application"
+    })
 });
 
 
@@ -30,11 +54,6 @@ Template.login.events({
         var email = $('[name=loginEmail]').val();
         var password = $('[name=loginPassword]').val();
         Meteor.loginWithPassword(email, password);
-          if (err) {
-            console.log(err);
-          }  else {
-            console.log("Logged in " + ign);
-          }
     }
 });
 
@@ -60,7 +79,7 @@ Template.register.events({
 
       // Trim and validate the input
 
-    Accounts.createUser({email: email, password : password, ign : ign}, function(err){
+    Accounts.createUser({email: email, password : password, ign : ign, admin : admin}, function(err){
         if (err) {
           console.log(err);
         } else {

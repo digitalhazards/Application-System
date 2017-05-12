@@ -18,3 +18,23 @@
         </div>
     </div>
 </template>
+<template name="CMModApp">
+    {{> nav}}
+    <div class="container">
+        <div class="jumbotron">
+            <div style="padding: 0% 20%;">
+                <h4>Apply for CM Mod</h4>
+                <form method="post">
+                    <div class="form-group">
+                        <h5>Minecraft IGN</h5>
+                        <p>{{>ign}}</p>
+                        <h5>What languages do you know?</h5>
+                        <textarea class="form-control" placeholder="What Languages do you Know?"></textarea>
+                    </div>
+                    <button class="btn btn-default" style="width: 100%" type="submit">Apply for Position</button>
+                </form>
+                <br/>
+            </div>
+        </div>
+    </div>
+</template>

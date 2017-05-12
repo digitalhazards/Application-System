@@ -1,9 +1,8 @@
 <template name="nav">
-  <div class="loginButtons" >{{> loginButtons }}</div>
 <div id='cssmenu' class='align-center container'>
 <ul>
    <li><a href='/'><span>HOME</span></a></li>
-    <li><a href='#'><span>POSITIONS</span></a></li>
+    <li><a href='/positions'><span>POSITIONS</span></a></li>
    <li class='has-sub'><a href='#'><span>APPLY</span></a>
       <ul>
          <li><a href='#'><span>MEDEVIAL TIMES</span></a></li>
@@ -12,14 +11,17 @@
           <li><a href='/networkapplications'><span>NETWORK</span></a></li>
       </ul>
    </li>
-    <li><a href='/myapp/'><span>MY APPLICATION</span></a></li>
     {{#if currentUser}}<li class="has-sub"><a href='#'><span style="text-transform: uppercase;">{{>ign}}</span></a>
       <ul>
          <li><a href='#'><span>My Applications</span></a></li>
           <li><a href='#'><span>Settings</span></a></li>
           <li><a href='#' class="logout"><span style="color: red;" >Logout</span></a></li>
       </ul>
-    </li>{{/if}}
+    </li>
+    {{else}}
+    <li><a href="/login"><span>Login</span></a></li>
+
+    {{/if}}
 </ul>
 </div>
     <br/><br/>
