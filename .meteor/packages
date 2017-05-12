@@ -23,3 +23,4 @@ bootswatch:paper
 ian:accounts-ui-bootstrap-3
 accounts-password
 iron:router
+accounts-base

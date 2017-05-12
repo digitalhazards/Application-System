@@ -15,27 +15,15 @@ Router.route('/status', function () {
 Router.route('/networkapplications', function () {
     this.render('NetworkApplication');
 });
-Router.route('/status', function () {
-    this.render('status');
-});
-
-Template.register.events({
-    'submit form': function(event) {
-        event.preventDefault();
-        var emailVar = event.target.registerEmail.value;
-        var passwordVar = event.target.registerPassword.value;
-        Accounts.createUser({
-            email: emailVar,
-            password: passwordVar
-        });
-    }
+Router.route('/myapp', function () {
+    this.render('myapp');
 });
 
 Template.login.events({
-  'submit form': function(event) {
-    event.preventDefault();
-    var emailVar = event.target.loginEmail.value;
-    var passwordVar = event.target.loginPassword.value;
-    Meteor.loginWithPassword(emailVar, passwordVar);
-  }
+    'submit form': function(event){
+        event.preventDefault();
+        var email = $('[name=loginEmail]').val();
+        var password = $('[name=loginPassword]').val();
+        Meteor.loginWithPassword(email, password);
+    }
 });
