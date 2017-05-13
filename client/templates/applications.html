@@ -19,17 +19,64 @@
     </div>
 </template>
 <template name="CMModApp">
+  <style>
+    .input-group-addon {font-size: 18px;}
+  </style>
     {{> nav}}
     <div class="container">
         <div class="jumbotron">
             <div style="padding: 0% 20%;">
-                <h4>Apply for CM Mod</h4>
+                <h2>Apply for CM Mod</h2>
+                <hr/>
                 <form method="post">
                     <div class="form-group">
-                        <h5>Minecraft IGN</h5>
-                        <p>{{>ign}}</p>
-                        <h5>What languages do you know?</h5>
-                        <textarea class="form-control" placeholder="What Languages do you Know?"></textarea>
+                      <div class="input-group">
+                            <span class="input-group-addon">Minecraft IGN</span>
+                            <p>{{>ign}}</p>
+                      </div>
+                        <hr/>
+                        <div class="input-group">
+                          <span class="input-group-addon">Discord Name</span>
+                          <input class="form-control" type="text" name="discordName" />
+                        </div>
+                        <hr/>
+                        <div class="input-group">
+                          <span class="input-group-addon">Age</span>
+                          <input class="form-control" type="text" name="age" />
+                      </div>
+                      <hr/>
+                      <div class="input-group">
+                        <span class="input-group-addon">How long have you been playing?</span>
+                        <input class="form-control" type="text" name="playlength" />
+                      </div>
+                      <hr/>
+                        <div class="input-group">
+                          <span class="input-group-addon">How often do you play?</span>
+                          <input class="form-control" type="text" name="playfrequency" />
+                        </div>
+                        <hr/>
+                        <div class="input-group">
+                          <span class="input-group-addon">What server do you play on?</span>
+                          <select class="form-control" name="serverNumber">
+                           <option>1</option>
+                           <option>2</option>
+                         </select>
+                       </div>
+                       <hr/>
+                        <h5>What mods do you 'major' in?</h5>
+                        <textarea class="form-control" name="majormods" ></textarea>
+                        <hr/>
+                        <h5>You see someone being racist in chat, how do you handle it:</h5>
+                        <textarea class="form-control" name="racist" ></textarea>
+                        <hr/>
+                        <h5>Someone is asking for creatively spawned dirt, how do you handle it:</h5>
+                        <textarea class="form-control" name="dirtspawn" ></textarea>
+                        <hr/>
+                        <h5>What servers have you staffed before:</h5>
+                        <input type="text" class="form-control" name="previousStaff" />
+                        <hr/>
+                        <h5>Why should we allow you to be a staff member?</h5>
+                        <textarea class="form-control" name="whyStaff"></textarea>
                     </div>
                     <button class="btn btn-default" style="width: 100%" type="submit">Apply for Position</button>
                 </form>
