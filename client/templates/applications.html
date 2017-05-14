@@ -2,13 +2,22 @@
     {{> nav}}
 
     <div class="container">
+        {{#if currentUser}}
         <div class="jumbotron">
             <div style="padding: 0% 20%;">
                 {{> quickForm collection="NetworkApp" id="insertNetworkApp" type="insert" class="new-network-app" }}
             </div>
         </div>
+            {{else}}
+            <div class="alert alert-warning">Please <a href="/me">Login</a> to apply.</div>
+        {{/if}}
     </div>
 </template>
+
+
+
+
+
 <template name="CMModApp">
   <style>
     .input-group-addon {font-size: 18px;}

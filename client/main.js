@@ -62,26 +62,15 @@ Template.register.events({
       , ign = t.find('[name=registerIGN]').value
       , password = t.find('[name=registerPassword]').value;
 
-    // Password Logic <div class="alert alert-warning" role="alert">...</div>
-    if (email = ""){
-      $('.errorSpawn').append('<div class="alert alert-warning" role="alert"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp;Email is Empty!</div>');
-    }
-    else if (password = "") {
-      $('.errorSpawn').append('<div class="alert alert-warning" role="alert"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp;Password is Empty!</div>');
-    }
-    else if (ign = "") {
-      $('.errorSpawn').append('<div class="alert alert-warning" role="alert"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp;In Game Name is Empty!</div>');
-    }
-
 
       // Trim and validate the input
 
-    Accounts.createUser({email: email, password : password, ign : ign, admin : admin}, function(err){
+    Accounts.createUser({email: email, password : password, ign : ign}, function(err){
         if (err) {
           console.log(err);
         } else {
           console.log("Logged in.");
-          location.replace("/myapp");
+          location.replace("/me");
         }
 
       });
