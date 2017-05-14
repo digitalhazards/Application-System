@@ -16,6 +16,7 @@
          <li><a href='/me/applications'><span>My Applications</span></a></li>
           <li><a href='#'><span>Settings</span></a></li>
           <li><a href='#' class="logout"><span style="color: red;" >Logout</span></a></li>
+          {{#if isManagerUser}}<li><a href="/admin" title="admin"><span>Admin</span></a></li>{{/if}}
       </ul>
     </li>
     {{else}}

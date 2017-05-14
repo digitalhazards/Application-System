@@ -9,6 +9,9 @@ Template.me.helpers({
 Template.nav.helpers({
     ign: function() {
         return Meteor.user().profile.ign;
+    },
+    isManagerUser: function() {
+        return Roles.userIsInRole(Meteor.user(), ['admin']);
     }
 });
 
@@ -29,6 +32,13 @@ Template.myapps.helpers({
 
 
 Template.adminui.helpers({
+    // check if user is an admin
+    isAdminUser: function() {
+        return Roles.userIsInRole(Meteor.user(), ['admin']);
+    }
+});
+
+Template.admin.helpers({
     // check if user is an admin
     isAdminUser: function() {
         return Roles.userIsInRole(Meteor.user(), ['admin']);

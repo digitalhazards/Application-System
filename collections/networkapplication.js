@@ -59,6 +59,16 @@ NetworkAppSchema = new SimpleSchema ({
         autoform: {
             type: "hidden"
         }
+    },
+    status: {
+      type: String,
+      label: "Status",
+      autoValue: function(){
+        return "Pending";
+      },
+      autoform: {
+        type: "hidden",
+      }
     }
 
 

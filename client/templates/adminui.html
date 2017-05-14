@@ -3,3 +3,19 @@
             {{> accountsAdmin}}
         {{/if}}
 </template>
+<template name="admin">
+  {{#if isAdminUser}}
+          {{>nav}}
+          <div class="container">
+            <div class="jumbotron">
+                <h3>Welcome Admin</h3>
+                <hr/>
+                <h5>Network Applications</h5>
+                <div class="list-group">
+                  <a href="#" class="list-group-item"><span class="label label-danger">Rejected</span>&nbsp;i3itCoin's Application</a>
+                  <a href="#" class="list-group-item"><span class="label label-success">Accepted</span>&nbsp;Nigglet's Application</a>
+                </div>
+            </div>
+          </div>
+  {{/if}}
+</template>
