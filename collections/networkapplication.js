@@ -1,8 +1,10 @@
 import SimpleSchema from 'simpl-schema';
 SimpleSchema.extendOptions(['autoform']);
 
+// Create Collection
 NetworkApp = new Mongo.Collection('NetworkApp');
 
+// Only allow inert to collection if userId is true (logged in)
 NetworkApp.allow({
     insert: function (userId, doc) {
         return !!userId;
@@ -10,6 +12,7 @@ NetworkApp.allow({
 });
 
 
+// DB Schema for Quickform
 NetworkAppSchema = new SimpleSchema ({
     ign: {
         type: String,

@@ -12,7 +12,7 @@ Template.nav.helpers({
     }
 });
 
-
+// Log out user
 Template.nav.events({
     'click .logout': function(event){
         event.preventDefault();
@@ -20,6 +20,7 @@ Template.nav.events({
     }
 });
 
+// Show all applications that user submitted from NetworkApp collection
 Template.myapps.helpers({
     NetworkApps: ()=> {
         return NetworkApp.find({});
