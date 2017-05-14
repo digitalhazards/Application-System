@@ -6,6 +6,7 @@ Program designed for stuff...
 
 
 To Try:
+
     git clone https://github.com/jamslatt/mcapplications
     npm install
     meteor update
