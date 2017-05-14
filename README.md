@@ -5,6 +5,7 @@ Program designed for stuff...
 
 
 
+
 To Try:
     git clone https://github.com/jamslatt/mcapplications
     npm install
@@ -21,3 +22,4 @@ To do:
 - Manager / Admin role (All applications)
 - More applications
 - Secure & build logic.
+- Application status
