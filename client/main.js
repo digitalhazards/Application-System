@@ -22,6 +22,14 @@ Router.route('/me', function () {
     })
 });
 
+
+Router.route('/me/applications', function () {
+    this.render('myapps');
+    Router.onAfterAction(function () {
+        document.title = "My Applications"
+    })
+});
+
 Router.route('/register', function () {
     this.render('register');
     Router.onAfterAction(function () {

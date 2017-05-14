@@ -3,7 +3,12 @@
 Template.me.helpers({
     ign: function() {
         return Meteor.user().profile.ign;
-        return Meteor.user().profile.admin;
+    }
+});
+
+Template.nav.helpers({
+    ign: function() {
+        return Meteor.user().profile.ign;
     }
 });
 
@@ -14,3 +19,4 @@ Template.nav.events({
         Meteor.logout();
     }
 });
+
