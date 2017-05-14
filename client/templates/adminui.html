@@ -8,14 +8,50 @@
           {{>nav}}
           <div class="container">
             <div class="jumbotron">
-                <h3>Welcome Admin</h3>
+                <h3>Admin Panel</h3>
                 <hr/>
                 <h5>Network Applications</h5>
                 <div class="list-group">
-                  <a href="#" class="list-group-item"><span class="label label-danger">Rejected</span>&nbsp;i3itCoin's Application</a>
-                  <a href="#" class="list-group-item"><span class="label label-success">Accepted</span>&nbsp;Nigglet's Application</a>
+                {{#each AllNetworkApps}}
+                <a href="/application/{{_id}}" class="list-group-item"><span class="label label-danger">{{ status }}</span>&nbsp;{{ ign }} Application</a>
+                {{/each}}
                 </div>
             </div>
           </div>
   {{/if}}
+</template>
+
+<template name="app_detail">
+  {{> nav}}
+  <div class="container">
+      <div class="panel panel-primary">
+          <div class="panel-heading">Network Application&nbsp;<span class="label label-info">{{ status }}</span></div>
+          <div class="panel-body">
+              <div class="well well-sm">
+                  <h5>IGN</h5>
+                  <p>{{ ign }}</p>
+              </div>
+              <div class="well well-sm">
+                  <h5>Discord Name</h5>
+                  <p>{{ discordName }}</p>
+              </div>
+              <div class="well well-sm">
+                  <h5>How long have you been a member at Digital Hazards?</h5>
+                  <p>{{ memberlength }}</p>
+              </div>
+              <div class="well well-sm">
+                  <h5>What languages do you know?</h5>
+                  <p>{{ languageKnown }}</p>
+              </div>
+              <div class="well well-sm">
+                  <h5>Why do you want to join the Network staff?</h5>
+                  <p>{{ whyyou }}</p>
+              </div>
+
+          </div>
+          <div class="panel-footer">
+              Submitted on: {{createdAt}}
+          </div>
+      </div>
+  </div>
 </template>

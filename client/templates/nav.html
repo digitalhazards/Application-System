@@ -13,16 +13,16 @@
    </li>
     {{#if currentUser}}<li class="has-sub"><a href='/me'><span style="text-transform: uppercase;">{{ign}}</span></a>
       <ul>
-         <li><a href='/me/applications'><span>My Applications</span></a></li>
+         <li><a href='/me/applications'><span>My Applications{{#if isManagerUser }}(broken for managers){{/if}}</span></a></li>
           <li><a href='#'><span>Settings</span></a></li>
           <li><a href='#' class="logout"><span style="color: red;" >Logout</span></a></li>
-          {{#if isManagerUser}}<li><a href="/admin" title="admin"><span>Admin</span></a></li>{{/if}}
       </ul>
     </li>
     {{else}}
     <li><a href="/me"><span>Login</span></a></li>
 
     {{/if}}
+    {{#if isManagerUser}}<li><a href="/admin" title="admin"><span>Admin</span></a></li>{{/if}}
 </ul>
 </div>
     <br/><br/>

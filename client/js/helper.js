@@ -26,7 +26,17 @@ Template.nav.events({
 // Show all applications that user submitted from NetworkApp collection
 Template.myapps.helpers({
     NetworkApps: ()=> {
-        return NetworkApp.find({});
+        return NetworkApp.find({applicant: Meteor.userId()});
+    }
+});
+
+Template.admin.helpers({
+    AllNetworkApps: ()=> {
+        return NetworkApp.find();
+    },
+    // check if user is an admin
+    isAdminUser: function() {
+        return Roles.userIsInRole(Meteor.user(), ['admin']);
     }
 });
 
@@ -37,10 +47,3 @@ Template.adminui.helpers({
         return Roles.userIsInRole(Meteor.user(), ['admin']);
     }
 });
-
-Template.admin.helpers({
-    // check if user is an admin
-    isAdminUser: function() {
-        return Roles.userIsInRole(Meteor.user(), ['admin']);
-    }
-})
