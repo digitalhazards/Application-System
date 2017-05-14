@@ -3,6 +3,13 @@ SimpleSchema.extendOptions(['autoform']);
 
 NetworkApp = new Mongo.Collection('NetworkApp');
 
+NetworkApp.allow({
+    insert: function (userId, doc) {
+        return !!userId;
+    }
+});
+
+
 NetworkAppSchema = new SimpleSchema ({
     ign: {
         type: String,
@@ -34,7 +41,7 @@ NetworkAppSchema = new SimpleSchema ({
         type: String,
         label: "Applicant",
         autoValue: function () {
-            return this.userID();
+            return Meteor.userId();
         },
         autoform: {
             type: "hidden"

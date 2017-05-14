@@ -1,9 +1,10 @@
 // Returns logged in members IGN
 
-Template.ign.helpers({
-  ign: function() {
-    return Meteor.user().profile.ign;
-  }
+Template.me.helpers({
+    ign: function() {
+        return Meteor.user().profile.ign;
+        return Meteor.user().profile.admin;
+    }
 });
 
 
