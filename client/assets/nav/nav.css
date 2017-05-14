@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
 #cssmenu {
   background: rgba(15, 15, 15, 0.7);
@@ -368,15 +369,6 @@
     top: 26px;
   }
 }
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
-/*!
- * bootswatch v3.3.4+1
- * Homepage: http://bootswatch.com
- * Copyright 2012-2015 Thomas Park
- * Licensed under MIT
- * Based on Bootstrap
-*/
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
