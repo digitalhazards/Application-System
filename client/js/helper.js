@@ -26,3 +26,11 @@ Template.myapps.helpers({
         return NetworkApp.find({});
     }
 });
+
+
+Template.adminui.helpers({
+    // check if user is an admin
+    isAdminUser: function() {
+        return Roles.userIsInRole(Meteor.user(), ['admin']);
+    }
+})
