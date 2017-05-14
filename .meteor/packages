@@ -25,3 +25,6 @@ accounts-password
 iron:router
 accounts-base
 fortawesome:fontawesome
+aldeed:autoform
+blaze
+aldeed:collection2-core@2.0.0

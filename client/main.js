@@ -5,10 +5,7 @@ import './main.html';
 
 // URL Routes
 Router.route('/', function () {
-    this.render('base');
-    Router.onAfterAction(function() {
-        document.title = 'Home';
-      });
+  this.render('base');
 });
 
 Router.route('/apply/network', function () {
