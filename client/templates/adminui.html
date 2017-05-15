@@ -11,7 +11,7 @@
                 <h5>Network Applications</h5>
                 <div class="list-group">
                 {{#each AllNetworkApps}}
-                <a href="/app/network{{_id}}" class="list-group-item"><span class="label label-danger">{{ status }}</span>&nbsp;{{ ign }} Application</a>
+                <a href="/app/network/{{_id}}" class="list-group-item"><span class="label label-danger">{{ status }}</span>&nbsp;{{ ign }} Application</a>
                 {{/each}}
                 </div>
             </div>
@@ -56,7 +56,7 @@
 
           </div>
           <div class="panel-footer">
-              Submitted on: {{createdAt}}
+              Submitted on: {{createdAt}}<button class="btn btn-danger btn-sm reject" style="float: right;">Reject</button><button class="btn btn-success btn-sm accept" style="float: right;">Accept</button>
           </div>
       </div>
   </div>

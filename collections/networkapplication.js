@@ -8,6 +8,9 @@ NetworkApp = new Mongo.Collection('NetworkApp');
 NetworkApp.allow({
   insert: function(userId, doc) {
     return !!userId;
+  },
+  update: function(userId, doc) {
+    return !!userId;
   }
 });
 
