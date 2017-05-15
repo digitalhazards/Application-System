@@ -49,4 +49,60 @@
             </div>
         </div>
     {{/each}}
+    {{#each CMApps }}
+        <div class="container">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Crafting Magic Application&nbsp;<span class="label label-info">{{ status }}</span></div>
+                <div class="panel-body">
+                    <div class="well well-sm">
+                        <h5>Minecraft IGN (In-Game Name)</h5>
+                        <p>{{ ign }}</p>
+                    </div>
+                    <div class="well well-sm">
+                        <h5>What is your Discord Name</h5>
+                        <p>{{ discordName }}</p>
+                    </div>
+                    <div class="well well-sm">
+                        <h5>How old are you?</h5>
+                        <p>{{ age }}</p>
+                    </div>
+                    <div class="well well-sm">
+                        <h5>How long have you been playing?</h5>
+                        <p>{{ memberlength }}</p>
+                    </div>
+                    <div class="well well-sm">
+                        <h5>How often are you online?</h5>
+                        <p>{{ playtime }}</p>
+                    </div>
+                    <div class="well well-sm">
+                        <h5>Which server do you play on?</h5>
+                        <p>{{ serverNumber }}</p>
+                    </div>
+                    <div class="well well-sm">
+                        <h5>What mods do you 'major' in?</h5>
+                        <p>{{ modMajors }}</p>
+                    </div>
+                    <div class="well well-sm">
+                        <h5>You see someone being racist in chat, how do you handle it?</h5>
+                        <p>{{ scenarioRacist }}</p>
+                    </div>
+                    <div class="well well-sm">
+                        <h5>Someone is asking for creatively spawned in items, how do you handle it?</h5>
+                        <p>{{ scenarioSpawn }}</p>
+                    </div>
+                    <div class="well well-sm">
+                        <h5>What servers have you staffed before?</h5>
+                        <p>{{ previousStaff }}</p>
+                    </div>
+                    <div class="well well-sm">
+                        <h5>Why should we allow you to be a staff member?</h5>
+                        <p>{{ whyyou }}</p>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    Submitted on: {{createdAt}}
+                </div>
+            </div>
+        </div>
+    {{/each}}
 </template>

@@ -27,12 +27,18 @@ Template.nav.events({
 Template.myapps.helpers({
     NetworkApps: ()=> {
         return NetworkApp.find({applicant: Meteor.userId()});
+    },
+    CMApps: ()=> {
+      return CMApp.find({applicant: Meteor.userId()});
     }
 });
 
 Template.admin.helpers({
     AllNetworkApps: ()=> {
-        return NetworkApp.find();
+        return NetworkApp.find({});
+    },
+    AllCMApps: ()=> {
+      return CMApp.find({});
     },
     // check if user is an admin
     isAdminUser: function() {

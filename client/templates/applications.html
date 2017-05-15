@@ -5,6 +5,7 @@
         {{#if currentUser}}
         <div class="jumbotron">
             <div style="padding: 0% 20%;">
+              <h3>Network Developer Application</h3>
                 {{> quickForm collection="NetworkApp" id="insertNetworkApp" type="insert" class="new-network-app" }}
             </div>
         </div>
@@ -18,69 +19,18 @@
 
 
 <template name="CMModApp">
-  <style>
-    .input-group-addon {font-size: 18px;}
-  </style>
-    {{> nav}}
-    <div class="container">
-        <div class="jumbotron">
-            <div style="padding: 0% 20%;">
-                <h2>Apply for CM Mod</h2>
-                <hr/>
-                <form method="post">
-                    <div class="form-group">
-                      <div class="input-group">
-                            <span class="input-group-addon">Minecraft IGN (In-Game Name)</span>
-                            <input class="form-control" type="text" name="ign" />
-                      </div>
-                        <hr/>
-                        <div class="input-group">
-                          <span class="input-group-addon">What is your Discord Name</span>
-                          <input class="form-control" type="text" name="discordName" />
-                        </div>
-                        <hr/>
-                        <div class="input-group">
-                          <span class="input-group-addon">How old are you?</span>
-                          <input class="form-control" type="text" name="age" />
-                      </div>
-                      <hr/>
-                      <div class="input-group">
-                        <span class="input-group-addon">How long have you been playing?</span>
-                        <input class="form-control" type="text" name="playlength" />
-                      </div>
-                      <hr/>
-                        <div class="input-group">
-                          <span class="input-group-addon">How often are you online?</span>
-                          <input class="form-control" type="text" name="playfrequency" />
-                        </div>
-                        <hr/>
-                        <div class="input-group">
-                          <span class="input-group-addon">Which server do you play on?</span>
-                          <select class="form-control" name="serverNumber">
-                           <option>1</option>
-                           <option>2</option>
-                         </select>
-                       </div>
-                       <hr/>
-                        <h5>What mods do you 'major' in?</h5>
-                        <textarea class="form-control" name="majormods" ></textarea>
-                        <hr/>
-                        <h5>You see someone being racist in chat, how do you handle it?</h5>
-                        <textarea class="form-control" name="racist" ></textarea>
-                        <hr/>
-                        <h5>Someone is asking for creatively spawned in items, how do you handle it?</h5>
-                        <textarea class="form-control" name="dirtspawn" ></textarea>
-                        <hr/>
-                        <h5>What servers have you staffed before?</h5>
-                        <input type="text" class="form-control" name="previousStaff" />
-                        <hr/>
-                        <h5>Why should we allow you to be a staff member?</h5>
-                        <textarea class="form-control" name="whyStaff"></textarea>
-                    </div>
-                    <button class="btn btn-default" style="width: 100%" type="submit">Apply for Position</button>
-                </form>
-                <br/>
-            </div>
-        </div>
-    </div>
+  {{> nav}}
+
+  <div class="container">
+      {{#if currentUser}}
+      <div class="jumbotron">
+          <div style="padding: 0% 20%;">
+            <h3>Crafting Magic Moderator Application</h3>
+              {{> quickForm collection="CMApp" id="insertCMApp" type="insert" class="new-cm-app" }}
+          </div>
+      </div>
+          {{else}}
+          <div class="alert alert-warning">Please <a href="/me">Login</a> to apply.</div>
+      {{/if}}
+  </div>
 </template>

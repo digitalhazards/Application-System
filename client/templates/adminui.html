@@ -8,12 +8,18 @@
           {{>nav}}
           <div class="container">
             <div class="jumbotron">
-                <h3>Admin Panel</h3>
-                <hr/>
                 <h5>Network Applications</h5>
                 <div class="list-group">
                 {{#each AllNetworkApps}}
-                <a href="/application/{{_id}}" class="list-group-item"><span class="label label-danger">{{ status }}</span>&nbsp;{{ ign }} Application</a>
+                <a href="/app/network{{_id}}" class="list-group-item"><span class="label label-danger">{{ status }}</span>&nbsp;{{ ign }} Application</a>
+                {{/each}}
+                </div>
+            </div>
+            <div class="jumbotron">
+                <h5>Crafting Magic Applications</h5>
+                <div class="list-group">
+                {{#each AllCMApps}}
+                <a href="/app/cm/{{_id}}" class="list-group-item"><span class="label label-danger">{{ status }}</span>&nbsp;{{ ign }} Application</a>
                 {{/each}}
                 </div>
             </div>

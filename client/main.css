@@ -12,6 +12,9 @@ body {
 .glyphicon-search {
   color: #000;
 }
+option {
+  background: #000;
+}
 .info {
   background: none !important;
 }
