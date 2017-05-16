@@ -46,3 +46,18 @@
       {{/if}}
   </div>
 </template>
+
+<template name="MRApp">
+  <div class="container">
+      {{#if currentUser}}
+      <div class="jumbotron">
+          <div style="padding: 0% 20%;">
+            <h3>Magic Revolution Application</h3>
+              {{> quickForm collection="MRApp" id="insertMRApp" type="insert" class="new-mr-app" }}
+          </div>
+      </div>
+          {{else}}
+          <div class="alert alert-warning">Please <a href="/me">Login</a> to apply.</div>
+      {{/if}}
+  </div>
+</template>

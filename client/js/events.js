@@ -14,6 +14,12 @@ Template.MTApp.events({
   }
 })
 
+Template.MRApp.events({
+  'submit form': function (e, t) {
+    Router.go('/me/applications');
+  }
+})
+
 Template.app_detail.events({
   'click .accept': function (e, t) {
     console.log("Accept");
