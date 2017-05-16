@@ -30,6 +30,9 @@ Template.myapps.helpers({
     },
     CMApps: ()=> {
       return CMApp.find({applicant: Meteor.userId()});
+    },
+    MTApps: ()=> {
+      return MTApp.find({applicant: Meteor.userId()});
     }
 });
 
@@ -39,6 +42,9 @@ Template.admin.helpers({
     },
     AllCMApps: ()=> {
       return CMApp.find({});
+    },
+    AllMTApps: ()=> {
+      return MTApp.find({});
     },
     // check if user is an admin
     isAdminUser: function() {

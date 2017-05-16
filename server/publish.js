@@ -13,3 +13,11 @@ Meteor.publish('CMApps', function (group) {
       return CMApp.find({applicant: this.userId});
     }
 });
+
+Meteor.publish('MTApps', function (group) {
+    if (Roles.userIsInRole(this.userId, ['admin'], group)) {
+      return MTApp.find({});
+    } else {
+      return MTApp.find({applicant: this.userId});
+    }
+});

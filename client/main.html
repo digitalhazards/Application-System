@@ -1,14 +1,13 @@
 <template name="base">
     <head>
         <title>MC Applications</title>
-        <link href="https://digitalhazards.net/assets/favicon/favicon.ico?29452" rel="icon">
+        <link rel='/favicon.ico' type='image/x-icon' href='favicon.ico' />
         <link href="assets/nav/nav.css" type="text/css" rel="stylesheet" />
         <link href="assets/theme.css" type="text/css" rel="stylesheet" />
     </head>
-
     <body>
         {{> nav}}
-        {{> home}}
+          {{> yield}}
         {{> js}}
     </body>
 

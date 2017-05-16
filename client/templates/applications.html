@@ -1,6 +1,4 @@
 <template name="NetworkApplication">
-    {{> nav}}
-
     <div class="container">
         {{#if currentUser}}
         <div class="jumbotron">
@@ -19,7 +17,6 @@
 
 
 <template name="CMModApp">
-  {{> nav}}
 
   <div class="container">
       {{#if currentUser}}
@@ -27,6 +24,21 @@
           <div style="padding: 0% 20%;">
             <h3>Crafting Magic Moderator Application</h3>
               {{> quickForm collection="CMApp" id="insertCMApp" type="insert" class="new-cm-app" }}
+          </div>
+      </div>
+          {{else}}
+          <div class="alert alert-warning">Please <a href="/me">Login</a> to apply.</div>
+      {{/if}}
+  </div>
+</template>
+
+<template name="MTApp">
+  <div class="container">
+      {{#if currentUser}}
+      <div class="jumbotron">
+          <div style="padding: 0% 20%;">
+            <h3>Medieval Times Application</h3>
+              {{> quickForm collection="MTApp" id="insertMTApp" type="insert" class="new-mt-app" }}
           </div>
       </div>
           {{else}}
