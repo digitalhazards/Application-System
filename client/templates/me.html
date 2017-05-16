@@ -4,13 +4,25 @@
         <div class="jumbotron">
     {{#if currentUser}}
       IGN: {{ign}}
-      {{>adminui}}
     {{else}}
           {{> login}}
     {{/if}}
 
         </div>
       </div>
+</template>
+
+<template name="secretAdmin">
+  <div class="container">
+      <div class="jumbotron">
+  {{#if currentUser}}
+    {{>adminui}}
+  {{else}}
+        {{> login}}
+  {{/if}}
+
+      </div>
+    </div>
 </template>
 
 <template name="myapps">
