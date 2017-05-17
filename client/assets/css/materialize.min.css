@@ -29,10 +29,10 @@
 	color: #f3989b !important
 }
 .materialize-red.lighten-2 {
-	background-color: #ee6e73 !important
+	background-color: rgba(15, 15, 15, 0.7) !important
 }
 .materialize-red-text.text-lighten-2 {
-	color: #ee6e73 !important
+	color: rgba(15, 15, 15, 0.7) !important
 }
 .materialize-red.lighten-1 {
 	background-color: #ea454b !important
@@ -1505,7 +1505,10 @@
 	color: #78909c !important
 }
 .blue-grey.darken-1 {
-	background-color: #546e7a !important
+	background-color: rgba(15, 15, 15, 0.7) !important;
+  border-color: #00A8FF;
+  border-style: solid;
+  border-width: 2px;
 }
 .blue-grey-text.text-darken-1 {
 	color: #546e7a !important
@@ -1816,7 +1819,7 @@ a {
 blockquote {
 	margin: 20px 0;
 	padding-left: 1.5rem;
-	border-left: 5px solid #ee6e73
+	border-left: 5px solid rgba(15, 15, 15, 0.7)
 }
 i {
 	line-height: inherit
@@ -1863,7 +1866,7 @@ img.responsive-img, video.responsive-video {
 	color: #fff
 }
 .pagination li.active {
-	background-color: #ee6e73
+	background-color: rgba(15, 15, 15, 0.7)
 }
 .pagination li.disabled a {
 	cursor: default;
@@ -2012,7 +2015,7 @@ ul.staggered-list li {
 }
 .page-footer {
 	padding-top: 20px;
-	background-color: #ee6e73
+	background-color: rgba(15, 15, 15, 0.7)
 }
 .page-footer .footer-copyright {
 	overflow: hidden;
@@ -2683,7 +2686,8 @@ nav ul a span.badge {
 		right: auto
 	}
 	.row .col.m6 {
-		width: 50%;
+		width: 100%;
+    padding-top:20px;
 		margin-left: auto;
 		left: auto;
 		right: auto
@@ -3199,10 +3203,13 @@ nav ul a span.badge {
 }
 nav {
 	color: #fff;
-	background-color: #ee6e73;
+	background-color: rgba(15, 15, 15, 0.7);
 	width: 100%;
 	height: 56px;
-	line-height: 56px
+	line-height: 56px;
+  border-bottom-color: #00A8FF;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
 }
 nav.nav-extended {
 	height: auto
@@ -3245,6 +3252,7 @@ nav .button-collapse i {
 	line-height: 56px
 }
 nav .brand-logo {
+  padding-left: 15px;
 	position: absolute;
 	color: #fff;
 	display: inline-block;
@@ -3896,7 +3904,7 @@ small {
 }
 .tabs .tab a:hover, .tabs .tab a.active {
 	background-color: transparent;
-	color: #ee6e73
+	color: rgba(15, 15, 15, 0.7)
 }
 .tabs .tab.disabled a, .tabs .tab.disabled a:hover {
 	color: rgba(238, 110, 115, 0.7);
@@ -5389,12 +5397,12 @@ input[type=range]:focus::-ms-fill-upper {
 .table-of-contents a:hover {
 	color: #a8a8a8;
 	padding-left: 19px;
-	border-left: 1px solid #ee6e73
+	border-left: 1px solid rgba(15, 15, 15, 0.7)
 }
 .table-of-contents a.active {
 	font-weight: 500;
 	padding-left: 18px;
-	border-left: 2px solid #ee6e73
+	border-left: 2px solid rgba(15, 15, 15, 0.7)
 }
 .side-nav {
 	position: fixed;
@@ -5558,7 +5566,7 @@ input[type=range]:focus::-ms-fill-upper {
 	}
 }
 .side-nav .collapsible-body>ul:not(.collapsible)>li.active, .side-nav.fixed .collapsible-body>ul:not(.collapsible)>li.active {
-	background-color: #ee6e73
+	background-color: rgba(15, 15, 15, 0.7)
 }
 .side-nav .collapsible-body>ul:not(.collapsible)>li.active a, .side-nav.fixed .collapsible-body>ul:not(.collapsible)>li.active a {
 	color: #fff
@@ -6166,7 +6174,7 @@ input[type=range]:focus::-ms-fill-upper {
 	position: absolute;
 	font-size: 1rem;
 	border-radius: 50%;
-	background-color: #ee6e73;
+	background-color: rgba(15, 15, 15, 0.7);
 	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.14), 0 10px 50px 0 rgba(0, 0, 0, 0.12), 0 30px 10px -20px rgba(0, 0, 0, 0.2);
 	width: 100%;
 	height: 100%;
@@ -6795,4 +6803,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 	.picker--time .picker__box {
 		margin-bottom: 5em
 	}
+}
+.alert-warning {
+    background-color: rgba(15, 15, 15, 0.7) !important;
+    color: #ff9800;
+    border-color: #ff9800;
+    border-style: solid;
+    border-width: 2px;
 }
