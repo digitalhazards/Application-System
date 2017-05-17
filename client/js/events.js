@@ -21,16 +21,16 @@ Template.MRApp.events({
 })
 
 Template.app_detail.events({
-  'click .accept': function (e, t) {
+  'click .accept': function (doc) {
     console.log("Accept");
-      NetworkApp.update(this._id, {
-        $set: {status: "Accept"},
-      });
+      NetworkApp.update(this._id, {$set:{
+        status: "Accepted"
+      }});
   },
   'click .reject': function (e, t) {
     console.log("Reject");
-    NetworkApp.update( this._id, {
-      $set: {status: "Reject"},
-    });
+    NetworkApp.update(this._id, {$set:{
+      status: "Rejected"
+    }});
   }
 })
