@@ -10,6 +10,9 @@ MTApp.allow({
   insert: function(userId, doc) {
     return !!userId;
   },
+  update: function(userId, doc) {
+    return !!userId;
+  }
 });
 
 //DB SimpleSchema
@@ -70,7 +73,7 @@ MTAppSchema = new SimpleSchema({
     label: "Applied At",
     //denyUpdate: true,
     autoValue: function() {
-      if (this.isInsert) return new Date();
+      if (this.insert) return new Date();
     },
     autoform: {
       type: "hidden"
