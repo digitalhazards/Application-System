@@ -6811,3 +6811,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     border-style: solid;
     border-width: 2px;
 }
+.container .jumbotron, .container-fluid .jumbotron {
+  background-color: transparent;
+}
