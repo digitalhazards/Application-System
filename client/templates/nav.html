@@ -12,8 +12,6 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="/">HOME</a></li>
         <li><a href="/positions">POSITIONS</a></li>
-        <!-- Dropdown Trigger -->
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">APPLY<i class="material-icons right"></i></a></li>
         {{#if currentUser}}<li class="has-sub"><a href='/me'><span style="text-transform: uppercase;">{{ign}}</span></a>
           <ul>
              <li><a href='/me/applications'><span>My Applications{{#if isManagerUser }}(broken for managers){{/if}}</span></a></li>
@@ -22,9 +20,10 @@
           </ul>
         </li>
         {{else}}
-        <li><a href="/me"><span>Login</span></a></li>
+        <li><a href="/me"><span>LOGIN</span></a></li>
 
         {{/if}}
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">APPLY<i class="material-icons right"></i></a></li>
         {{#if isManagerUser}}<li><a href="/admin" title="admin"><span>Admin</span></a></li>{{/if}}
       </ul>
     </div>
