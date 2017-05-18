@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 
 Meteor.startup(() => {
-  if (Meteor.users.findOne("5qwg82YYAeqM9tav6"))
-          Roles.addUsersToRoles("5qwg82YYAeqM9tav6", ['admin']);
+  if (Meteor.users.findOne("x5keSanPKaWnsdxc8"))
+          Roles.addUsersToRoles("x5keSanPKaWnsdxc8", ['admin']);
 });

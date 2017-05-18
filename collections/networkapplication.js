@@ -47,7 +47,7 @@ NetworkAppSchema = new SimpleSchema({
     type: String,
     label: "Applicant",
     autoValue: function() {
-      return Meteor.userId();
+      if (this.isInsert) return Meteor.userId();
     },
     autoform: {
       type: "hidden"
@@ -56,8 +56,9 @@ NetworkAppSchema = new SimpleSchema({
   createdAt: {
     type: Date,
     label: "Applied At",
+    //denyUpdate: true,
     autoValue: function() {
-      return new Date();
+      if (this.isInsert) return new Date();
     },
     autoform: {
       type: "hidden"
@@ -67,7 +68,7 @@ NetworkAppSchema = new SimpleSchema({
     type: String,
     label: "Status",
     autoValue: function() {
-      return "Pending";
+      if (this.insert) return "Pending";
     },
     autoform: {
       type: "hidden",

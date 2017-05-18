@@ -43,6 +43,7 @@
 </template>
 
 <template name="app_detail">
+  {{#if isAdminUser}}
   <div class="container">
       <div class="panel panel-primary">
           <div class="panel-heading">Network Application&nbsp;<span class="label label-info">{{ status }}</span></div>
@@ -74,9 +75,13 @@
           </div>
       </div>
   </div>
+  {{ else }}
+  <h3>403</h3>
+  {{/if}}
 </template>
 
 <template name="cm_app_detail">
+  {{#if isAdminUser}}
   <div class="container">
       <div class="panel panel-primary">
           <div class="panel-heading">Crafting Magic Application&nbsp;<span class="label label-info">{{ status }}</span></div>
@@ -131,8 +136,12 @@
           </div>
       </div>
   </div>
+  {{ else }}
+  <h3>403</h3>
+  {{/if}}
 </template>
 <template name="mt_app_detail">
+  {{#if isAdminUser}}
   <div class="container">
       <div class="panel panel-primary">
           <div class="panel-heading">Medieval Times Application&nbsp;<span class="label label-info">{{ status }}</span></div>
@@ -171,9 +180,13 @@
           </div>
       </div>
   </div>
+  {{ else }}
+  <h3>403</h3>
+  {{/if}}
 </template>
 
 <template name="mr_app_detail">
+  {{#if isAdminUser}}
   <div class="container">
       <div class="panel panel-primary">
           <div class="panel-heading">Magic Revolution Application&nbsp;<span class="label label-info">{{ status }}</span></div>
@@ -212,4 +225,7 @@
           </div>
       </div>
   </div>
+  {{ else }}
+  <h3>403</h3>
+  {{/if}}
 </template>

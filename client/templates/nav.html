@@ -1,31 +1,29 @@
 <template name="nav">
-  <!-- Dropdown Structure -->
-  <ul id="dropdown1" class="dropdown-content">
-    <li><a href='/apply/mt'><span>MEDEVIAL TIMES</span></a></li>
-     <li><a href='/apply/cm'><span>CRAFTING MAGIC</span></a></li>
-     <li><a href="/apply/mr"><span>MAGIC REVOLUTION</span></a></li>
-     <li><a href='/apply/network'><span>NETWORK</span></a></li>
-  </ul>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="/"><img src="/img/long-logo.png" alt="Digital Hazards" style="padding-left:20px;width:295px;height:37px;"></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/">HOME</a></li>
-        <li><a href="/positions">POSITIONS</a></li>
-        {{#if currentUser}}<li class="has-sub"><a href='/me'><span style="text-transform: uppercase;">{{ign}}</span></a>
-          <ul>
-             <li><a href='/me/applications'><span>My Applications{{#if isManagerUser }}(broken for managers){{/if}}</span></a></li>
-              <li><a href='#'><span>Settings</span></a></li>
-              <li><a href='#' class="logout"><span style="color: red;" >Logout</span></a></li>
-          </ul>
-        </li>
-        {{else}}
-        <li><a href="/me"><span>LOGIN</span></a></li>
-
-        {{/if}}
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">APPLY<i class="material-icons right"></i></a></li>
-        {{#if isManagerUser}}<li><a href="/admin" title="admin"><span>Admin</span></a></li>{{/if}}
+<div id='cssmenu' class='align-center container'>
+<ul>
+   <li><a href='/'><span>HOME</span></a></li>
+    <li><a href='/positions'><span>POSITIONS</span></a></li>
+   <li class='has-sub'><a href='#'><span>APPLY</span></a>
+      <ul>
+         <li><a href='/apply/mt'><span>MEDEVIAL TIMES</span></a></li>
+          <li><a href='/apply/cm'><span>CRAFTING MAGIC</span></a></li>
+          <li><a href="/apply/mr"><span>MAGIC REVOLUTION</span></a></li>
+          <li><a href='/apply/network'><span>NETWORK</span></a></li>
       </ul>
-    </div>
-  </nav>
+   </li>
+    {{#if currentUser}}<li class="has-sub"><a href='/me'><span style="text-transform: uppercase;">{{ign}}</span></a>
+      <ul>
+         <li><a href='/me/applications'><span>My Applications{{#if isManagerUser }}(broken for managers){{/if}}</span></a></li>
+          <li><a href='#'><span>Settings</span></a></li>
+          <li><a href='#' class="logout"><span style="color: red;" >Logout</span></a></li>
+      </ul>
+    </li>
+    {{else}}
+    <li><a href="/me"><span>Login</span></a></li>
+
+    {{/if}}
+    {{#if isManagerUser}}<li><a href="/admin" title="admin"><span>Admin</span></a></li>{{/if}}
+</ul>
+</div>
+    <br/><br/>
 </template>

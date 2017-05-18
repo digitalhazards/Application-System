@@ -58,6 +58,29 @@ Template.admin.helpers({
     }
 });
 
+Template.app_detail.helpers({
+    isAdminUser: function() {
+        return Roles.userIsInRole(Meteor.user(), ['admin']);
+    }
+});
+
+Template.cm_app_detail.helpers({
+    isAdminUser: function() {
+        return Roles.userIsInRole(Meteor.user(), ['admin']);
+    }
+});
+
+Template.mt_app_detail.helpers({
+    isAdminUser: function() {
+        return Roles.userIsInRole(Meteor.user(), ['admin']);
+    }
+});
+Template.mr_app_detail.helpers({
+    isAdminUser: function() {
+        return Roles.userIsInRole(Meteor.user(), ['admin']);
+    }
+});
+
 
 Template.adminui.helpers({
     // check if user is an admin
