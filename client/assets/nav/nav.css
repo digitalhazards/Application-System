@@ -5324,11 +5324,6 @@ a.thumbnail.active {
 .alert-info .alert-link {
   color: #771e86;
 }
-.alert-warning {
-  background-color: #ffe0b2;
-  border-color: #ffc599;
-  color: #ff9800;
-}
 .alert-warning hr {
   border-top-color: #ffb67f;
 }
@@ -5909,7 +5904,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-primary > .panel-heading {
   color: #ffffff;
-  background-color: #00A8FF;
+  background-color: #transparent;
   border-color: #00A8FF;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
@@ -7526,7 +7521,11 @@ input[type="checkbox"]:disabled:checked:after,
   background-color: #9c27b0;
 }
 .alert-warning {
-  background-color: #ff9800;
+  border-color: #ff9800;
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent!important;
+  color: #ff9800!important;
 }
 .alert-danger {
   background-color: #e51c23;
