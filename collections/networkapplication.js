@@ -55,26 +55,23 @@ NetworkAppSchema = new SimpleSchema({
   },
   createdAt: {
     type: Date,
-    label: "Applied At",
-    autoValue: function() {
-      if (this.isInsert) return new Date();
-    },
     autoform: {
       type: "hidden"
-    }
+    },
+    autoValue() {
+      if (this.isInsert) return new Date();
+    },
   },
   status: {
     type: String,
     label: "Status",
-    autoValue: function() {
+    autoValue() {
       if (this.isInsert) return "Pending";
     },
     autoform: {
       type: "hidden",
     }
   }
-
-
 });
 
 NetworkApp.attachSchema(NetworkAppSchema);

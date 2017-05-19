@@ -25,7 +25,7 @@ accounts-base
 fortawesome:fontawesome
 aldeed:autoform
 blaze
-aldeed:collection2-core@2.0.0
+aldeed:collection2-core
 meteortoys:allthings
 alanning:roles
 mrt:accounts-admin-ui-bootstrap-3

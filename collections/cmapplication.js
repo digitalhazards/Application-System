@@ -111,20 +111,18 @@ CMAppSchema = new SimpleSchema({
   },
   createdAt: {
     type: Date,
-    label: "Applied At",
-    //denyUpdate: true,
-    autoValue: function() {
-      if (this.isInsert) return new Date();
-    },
     autoform: {
       type: "hidden"
-    }
+    },
+    autoValue() {
+      if (this.isInsert) return new Date();
+    },
   },
   status: {
     type: String,
     label: "Status",
-    autoValue: function() {
-      if (this.insert) return "Pending";
+    autoValue() {
+      if (this.isInsert) return "Pending";
     },
     autoform: {
       type: "hidden",
