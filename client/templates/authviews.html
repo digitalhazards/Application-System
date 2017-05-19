@@ -1,7 +1,5 @@
 <template name="register">
   <div class="container">
-      <div class="jumbotron">
-  <div style="width: 50%; margin-left: auto;margin-right: auto;">
     <div class="errorSpawn"></div>
     <form class="regForm">
       <div class="form-group">
@@ -9,23 +7,33 @@
         <input class="form-control" placeholder="Email" type="email" name="registerEmail">
         <input class="form-control" placeholder="Password" type="password" name="registerPassword">
         <br/>
-        <button style="width: 100%" class="btn btn-default" type="submit" name="RegisterSubmit" value="Register">Register Account&nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i></button>
+        <button style="width: 100%" class="btn light-blue darken-3" type="submit" name="RegisterSubmit" value="Register">Register Account&nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i></button>
       </div>
     </form>
   </div>
-</div>
-</div>
 </template>
 <template name="login">
-    <div style="width: 50%; margin-left: auto;margin-right: auto;">
-      <form class="loginForm">
-        <div class="form-group">
-          <input class="form-control" placeholder="Email" type="email" name="loginEmail">
-          <input class="form-control" placeholder="Password" type="password" name="loginPassword">
-          <br/>
-          <button style="width: 100%" class="btn btn-default" type="submit" name="LoginSubmit" value="Login">Login&nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i></button>
-        </div>
-      </form>
-        <p>Need an account? <a href="/register" title="Register">Register here!</a></p>
+    <div class="card">
+    <div class="card-tabs">
+      <ul class="tabs tabs-fixed-width">
+        <li class="tab"><a href="#login" class="active">Login</a></li>
+        <li class="tab"><a href="#register">Register</a></li>
+      </ul>
     </div>
+    <div class="card-content #039be5 light-blue darken-1">
+      <div id="login">
+        <div class="container">
+        <form class="loginForm">
+          <div class="form-group">
+            <input class="form-control" placeholder="Email" type="email" name="loginEmail">
+            <input class="form-control" placeholder="Password" type="password" name="loginPassword">
+            <br/>
+            <button style="width: 100%" class="btn light-blue darken-3" type="submit" name="LoginSubmit" value="Login">Login&nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i></button>
+          </div>
+        </form>
+      </div>
+      </div>
+      <div id="register">{{>register}}</div>
+    </div>
+  </div>
 </template>

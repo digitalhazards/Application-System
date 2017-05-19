@@ -17,8 +17,6 @@ es5-shim@4.6.15                # ECMAScript 5 compatibility for older browsers.
 ecmascript@0.7.3              # Enable ECMAScript2015+ syntax in app code
 shell-server@0.2.3            # Server-side component of the `meteor shell` command
 
-bootswatch:paper
-ian:accounts-ui-bootstrap-3
 accounts-password
 iron:router
 accounts-base
@@ -29,4 +27,3 @@ aldeed:collection2-core
 meteortoys:allthings
 alanning:roles
 mrt:accounts-admin-ui-bootstrap-3
-matb33:bootstrap-glyphicons

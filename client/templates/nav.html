@@ -1,5 +1,5 @@
 <template name="nav">
-<div id='cssmenu' class='align-center container'>
+<!--<div id='cssmenu' class='align-center container'>
 <ul>
    <li><a href='/'><span>HOME</span></a></li>
     <li><a href='/positions'><span>POSITIONS</span></a></li>
@@ -25,5 +25,37 @@
     {{#if isManagerUser}}<li><a href="/admin" title="admin"><span>Admin</span></a></li>{{/if}}
 </ul>
 </div>
+-->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="/apply/network">Network Jobs</a></li>
+  <li><a href="/apply/cm">Crafting Magic</a></li>
+  <li><a href="/apply/mt">Medieval Times</a></li>
+  <li><a href="/apply/mr">Magic Revolution</a></li>
+</ul>
+<ul id="me" class="dropdown-content">
+  <li><a href="/me">Profile</a></li>
+  <li><a href="/me/applications">My Apps</a></li>
+  <li><a href="#!" class="logout">Logout</a></li>
+</ul>
+<nav class="light-blue darken-3" role="navigation">
+  <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Logo</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/">HOME</a></li>
+      <li><a href="/positions">POSITIONS</a></li>
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">APPLY<i class="material-icons right">arrow_drop_down</i></a></li>
+      {{#if currentUser }}<li><a class="dropdown-button" href="#!" data-activates="me">{{ ign }}<i class="material-icons right">arrow_drop_down</i></a></li><script>$(".dropdown-button").dropdown();</script>{{else}}<li><a href="/me">LOGIN</a></li>{{/if}}
+
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav light-blue darken-3 ">
+      <li><a href="#">Navbar Link</a></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
+<script>
+$(".dropdown-button").dropdown();
+$('.button-collapse').sideNav();
+</script>
     <br/><br/>
 </template>

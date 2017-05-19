@@ -1,5 +1,23 @@
+html {
+  color: #fff !important;
+}
 body {
     background: url("/public/img/bg.jpg");
     background-position: center;
     background-size: cover;
+}
+.side-nav li a {
+  color: #fff !important;
+}
+.dropdown-content li>a, .dropdown-content li>span {
+  color: #0277bd !important;
+}
+.tabs .tab a:hover, .tabs .tab a.active {
+  color: #0277bd !important;
+}
+.tabs .tab a {
+  color: #0277bd !important;
+}
+.tabs .indicator {
+  background-color: #0277bd !important;
 }
