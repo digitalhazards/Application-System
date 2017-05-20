@@ -3,6 +3,7 @@ html {
 }
 body {
 	background: url("/img/bg.jpg");
+	background-color: #000;
 	background-position: center;
 	background-size: cover;
 }
@@ -637,7 +638,10 @@ body {
 	color: #0288d1 !important
 }
 .light-blue.darken-3 {
-	background-color: #0277bd !important
+	background-color: rgba(15, 15, 15, 0.7)!important;
+	border-bottom-width: 2px;
+	border-bottom-color: #00A8FF;
+	border-bottom-style: solid;
 }
 .light-blue-text.text-darken-3 {
 	color: #0277bd !important
@@ -1525,7 +1529,16 @@ body {
 	color: #78909c !important
 }
 .blue-grey.darken-1 {
-	background-color: #546e7a !important
+	background-color: rgba(15, 15, 15, 0.7)!important;
+  border-width: 2px;
+  border-color: #00A8FF;
+  border-style: solid;
+}
+.bugs-grey.darken-1 {
+	background-color: rgba(15, 15, 15, 0.7)!important;
+  border-width: 2px;
+  border-color: #ff9600;
+  border-style: solid;
 }
 .blue-grey-text.text-darken-1 {
 	color: #546e7a !important
@@ -1774,7 +1787,7 @@ html {
 	box-sizing: border-box
 }
 *, *:before, *:after {
-	box-sizing: inherit
+	box-sizing: inherit;
 }
 ul:not(.browser-default) {
 	padding-left: 0;
@@ -2444,6 +2457,16 @@ nav ul a span.badge {
 	margin: 0 auto;
 	max-width: 1280px;
 	width: 90%
+}
+.container-app {
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 90%;
+	background-color: rgba(15, 15, 15, 0.7)!important;
+	border-width: 2px;
+	border-color: #00A8FF;
+	border-style: solid;
+	padding-bottom:25px
 }
 @media only screen and (min-width: 601px) {
 	.container {
@@ -3731,7 +3754,7 @@ small {
 .card .card-action {
 	position: relative;
 	background-color: inherit;
-	border-top: 1px solid rgba(160, 160, 160, 0.2);
+	border-top: 1px solid rgba(160, 160, 160, 0.39);
 	padding: 16px 24px
 }
 .card .card-action:last-child {
