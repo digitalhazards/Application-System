@@ -626,7 +626,7 @@ body {
 	color: #29b6f6 !important
 }
 .light-blue.darken-1 {
-	background-color: #039be5 !important
+	background-color: rgba(15, 15, 15, 0.7)!important
 }
 .light-blue-text.text-darken-1 {
 	color: #039be5 !important
@@ -3629,9 +3629,11 @@ small {
 .card {
 	position: relative;
 	margin: .5rem 0 1rem 0;
-	background-color: #fff;
 	transition: box-shadow .25s;
-	border-radius: 2px
+	border-radius: 2px;
+	border-width: 2px;
+	border-color: #00A8FF;
+	border-style: solid;
 }
 .card .card-title {
 	font-size: 24px;
@@ -3883,9 +3885,11 @@ small {
 	background-color: #fff
 }
 .tabs.tabs-fixed-width {
+	padding-top: 10px;
 	display: -webkit-flex;
 	display: -ms-flexbox;
-	display: flex
+	display: flex;
+	background: rgba(15, 15, 15, 0.7)!important;
 }
 .tabs.tabs-fixed-width .tab {
 	-webkit-flex-grow: 1;
