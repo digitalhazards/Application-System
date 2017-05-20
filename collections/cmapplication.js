@@ -44,7 +44,7 @@ CMAppSchema = new SimpleSchema({
   },
   serverNumber: {
     type: String,
-    label: "Which server do you play on?",
+    label: " ",
     optional: false,
     autoform: {
       type: "select",

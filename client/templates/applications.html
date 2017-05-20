@@ -3,9 +3,28 @@
         {{#if currentUser}}
         <div class="jumbotron">
             <div style="padding: 0% 20%;">
-              <h3>Network Developer Application</h3>
-                {{> quickForm collection="NetworkApp" id="insertNetworkApp" type="insert" class="new-network-app" }}
+              <h3>Network Application</h3>
+                {{#autoForm collection="NetworkApp" id="insertNetworkApp" type="insert" class="new-network-app" }}
+                <div class="input-field">
+                  {{> afQuickField name="ign"}}
+                </div>
+                <div class="input-field">
+                  {{> afQuickField name="discordName"}}
+                </div>
+                <div class="input-field">
+                  {{> afQuickField name="memberlength"}}
+                </div>
+                <div class="input-field">
+                  {{> afQuickField name="languageKnown"}}
+                </div>
+                <div class="input-field">
+                  {{> afQuickField name="whyyou"}}
+                </div>
+                <button type="submit" class="btn light-blue darken-3">Apply</button>
+
+              {{/autoForm}}
             </div>
+            <script>$("textarea").addClass('materialize-textarea');</script>
         </div>
             {{else}}
             <div class="alert alert-warning">Please <a href="/me">Login</a> to apply.</div>
@@ -22,8 +41,48 @@
       {{#if currentUser}}
       <div class="jumbotron">
           <div style="padding: 0% 20%;">
-            <h3>Crafting Magic Moderator Application</h3>
-              {{> quickForm collection="CMApp" id="insertCMApp" type="insert" class="new-cm-app" }}
+            <h3>Crafting Magic Application</h3>
+              {{#autoForm collection="CMApp" id="insertCMApp" type="insert" class="new-cm-app" }}
+              <div class="input-field">
+                {{> afQuickField name="ign"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="discordName"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="age"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="memberlength"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="playtime"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="serverNumber"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="modMajors"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="scenarioRacist"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="scenarioSpawn"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="previousStaff"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="whyyou"}}
+              </div>
+              <button type="submit" class="btn light-blue darken-3">Apply</button>
+              {{/autoForm}}
+              <script>
+              $("textarea").addClass('materialize-textarea');
+              $('select').material_select();
+              </script>
+
           </div>
       </div>
           {{else}}
@@ -38,7 +97,33 @@
       <div class="jumbotron">
           <div style="padding: 0% 20%;">
             <h3>Medieval Times Application</h3>
-              {{> quickForm collection="MTApp" id="insertMTApp" type="insert" class="new-mt-app" }}
+              {{#autoForm collection="MTApp" id="insertMTApp" type="insert" class="new-mt-app" }}
+              <div class="input-field">
+                {{> afQuickField name="ign"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="discordName"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="age"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="memberlength"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="playtime"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="previousStaff"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="whyyou"}}
+              </div>
+              <button type="submit" class="btn light-blue darken-3">Apply</button>
+              {{/autoForm}}
+              <script>
+              $("textarea").addClass('materialize-textarea');
+              </script>
           </div>
       </div>
           {{else}}
@@ -53,7 +138,33 @@
       <div class="jumbotron">
           <div style="padding: 0% 20%;">
             <h3>Magic Revolution Application</h3>
-              {{> quickForm collection="MRApp" id="insertMRApp" type="insert" class="new-mr-app" }}
+              {{#autoForm collection="MRApp" id="insertMRApp" type="insert" class="new-mr-app" }}
+              <div class="input-field">
+                {{> afQuickField name="ign"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="discordName"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="age"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="memberlength"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="playtime"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="previousStaff"}}
+              </div>
+              <div class="input-field">
+                {{> afQuickField name="whyyou"}}
+              </div>
+              <button type="submit" class="btn light-blue darken-3">Apply</button>
+              {{/autoForm}}
+              <script>
+              $("textarea").addClass('materialize-textarea');
+              </script>
           </div>
       </div>
           {{else}}
