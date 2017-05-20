@@ -21,3 +21,6 @@ body {
 .tabs .indicator {
   background-color: #0277bd !important;
 }
+.collection a.collection-item {
+    color: #0277bd !important;
+}

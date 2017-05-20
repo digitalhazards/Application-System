@@ -43,14 +43,26 @@ Template.admin.helpers({
     AllNetworkApps: ()=> {
         return NetworkApp.find({});
     },
+    AllPendingNetworkApps: ()=> {
+      return NetworkApp.find({status: "Pending"});
+    },
     AllCMApps: ()=> {
       return CMApp.find({});
+    },
+    AllPendingCMApps: ()=> {
+      return CMApp.find({status: "Pending"});
     },
     AllMTApps: ()=> {
       return MTApp.find({});
     },
+    AllPendingMTApps: ()=> {
+      return MTApp.find({status: "Pending"});
+    },
     AllMRApps: ()=> {
       return MRApp.find({});
+    },
+    AllPendingMRApps: ()=> {
+      return MRApp.find({status: "Pending"});
     },
     // check if user is an admin
     isAdminUser: function() {
