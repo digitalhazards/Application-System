@@ -27,16 +27,15 @@
             <script>$("textarea").addClass('materialize-textarea');</script>
         </div>
             {{else}}
-            <div class="alert alert-warning">Please <a href="/me">Login</a> to apply.</div>
+            <div class="card-content white-text">
+              <span class="card-title">You are not Logged in!</span>
+              <p>Please <a href="/me">Login</a> or <a href="/me">Register</a> to apply.</p>
+            </div>
         {{/if}}
     </div>
 </template>
 
-
-
-
 <template name="CMModApp">
-
   <div class="container-app">
       {{#if currentUser}}
       <div class="jumbotron">
@@ -86,7 +85,10 @@
           </div>
       </div>
           {{else}}
-          <div class="alert alert-warning">Please <a href="/me">Login</a> to apply.</div>
+              <div class="card-content white-text">
+                <span class="card-title">You are not Logged in!</span>
+                <p>Please <a href="/me">Login</a> or <a href="/me">Register</a> to apply.</p>
+              </div>
       {{/if}}
   </div>
 </template>
@@ -127,7 +129,10 @@
           </div>
       </div>
           {{else}}
-          <div class="alert alert-warning">Please <a href="/me">Login</a> to apply.</div>
+          <div class="card-content white-text">
+            <span class="card-title">You are not Logged in!</span>
+            <p>Please <a href="/me">Login</a> or <a href="/me">Register</a> to apply.</p>
+          </div>
       {{/if}}
   </div>
 </template>
@@ -168,7 +173,10 @@
           </div>
       </div>
           {{else}}
-          <div class="alert alert-warning">Please <a href="/me">Login</a> to apply.</div>
+          <div class="card-content white-text">
+            <span class="card-title">You are not Logged in!</span>
+            <p>Please <a href="/me">Login</a> or <a href="/me">Register</a> to apply.</p>
+          </div>
       {{/if}}
   </div>
 </template>
