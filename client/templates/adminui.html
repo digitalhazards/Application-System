@@ -4,7 +4,7 @@
         {{/if}}
 </template>
 <template name="admin">
-
+{{#if isAdminUser}}
   <div class="container">
     <div class="card">
     <div class="card-tabs">
@@ -53,6 +53,7 @@
 $(".dropdown-button").dropdown();
 $('.button-collapse').sideNav();
 </script>
+{{/if}}
 </template>
 
 <template name="app_detail">
