@@ -26,4 +26,6 @@ blaze
 aldeed:collection2-core
 meteortoys:allthings
 alanning:roles
-mrt:accounts-admin-ui-bootstrap-3
+cunneen:accounts-admin-materializecss
+jquery
+fourseven:scss

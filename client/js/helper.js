@@ -67,6 +67,9 @@ Template.admin.helpers({
     // check if user is an admin
     isAdminUser: function() {
         return Roles.userIsInRole(Meteor.user(), ['admin']);
+    },
+    isSuperAdmin: function() {
+      return Roles.userIsInRole(Meteor.user(), ['superadmin']);
     }
 });
 
@@ -98,5 +101,5 @@ Template.adminui.helpers({
     // check if user is an admin
     isAdminUser: function() {
         return Roles.userIsInRole(Meteor.user(), ['admin']);
-    }
+    },
 });

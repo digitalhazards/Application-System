@@ -5,6 +5,7 @@
 </template>
 <template name="admin">
 {{#if isAdminUser}}
+<script>$(".dropdown-button").dropdown();</script>
   <div class="container">
     <div class="card">
     <div class="card-tabs">
@@ -49,10 +50,6 @@
   </div>
 </div>
 {{> js}}
-<script>
-$(".dropdown-button").dropdown();
-$('.button-collapse').sideNav();
-</script>
 {{/if}}
 </template>
 
