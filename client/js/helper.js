@@ -72,6 +72,9 @@ Template.admin.helpers({
       return Roles.userIsInRole(Meteor.user(), ['superadmin']);
     }
 });
+Template.searchApp.helpers({
+  
+});
 
 Template.app_detail.helpers({
     isAdminUser: function() {

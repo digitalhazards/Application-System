@@ -79,3 +79,13 @@ Template.mt_app_detail.events({
     }});
   }
 })
+
+Template.search.events({
+  'submit form': function (e, t) {
+    var query = $('#search').val();
+    NetworkApp.find({ign: query});
+    
+
+    return false;
+  }
+})
