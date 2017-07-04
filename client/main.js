@@ -1,10 +1,3 @@
-import { Template } from 'meteor/templating';
-import { ReactiveVar } from 'meteor/reactive-var';
-
-import './main.html';
-
-
-
 // Login Logic
 Template.login.events({
     'submit form': function(event){
