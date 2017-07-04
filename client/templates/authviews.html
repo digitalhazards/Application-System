@@ -1,42 +1,38 @@
 <template name="register">
   <div class="container">
-    <div class="errorSpawn"></div>
-    <form class="regForm">
-      <div class="form-group">
-        <p>Please Provide you Minecraft IGN and your current Email address.</p>
-        <input class="form-control" placeholder="Minecraft Name (IGN)" type="text" name="registerIGN">
-        <input class="form-control" placeholder="Email" type="email" name="registerEmail">
-        <input class="form-control" placeholder="Password" type="password" name="registerPassword">
-        <br/>
-        <button style="width: 100%" class="btn light-blue darken-3" type="submit" name="RegisterSubmit" value="Register">Register Account&nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i></button>
+    <div class="container">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <p>Please Provide you Minecraft IGN and your current Email address.</p>
+                    <input class="form-control" placeholder="Minecraft Name (IGN)" type="text" name="IGN">
+                    <input class="form-control" placeholder="Email" type="email" name="email">
+                    <input class="form-control" placeholder="Password" type="password" name="password">
+                    <br />
+                    <button style="width: 100%" class="btn btn-primary" type="submit" name="submit" value="Register">Register Account&nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
       </div>
-    </form>
-  </div>
 </template>
 
 <template name="login">
-    <div class="card">
-    <div class="card-tabs">
-      <ul class="tabs tabs-fixed-width">
-        <li class="tab"><a href="#login" class="active">Login</a></li>
-        <li class="tab"><a href="#register">Register</a></li>
-      </ul>
-    </div>
-    <div class="card-content #039be5 light-blue darken-1">
-      <div id="login">
         <div class="container">
-        <p> Please login with your Email and Password, If you do not have an account yet please visit the register tab where you can create an account</p>
-        <form class="loginForm">
-          <div class="form-group">
-            <input class="form-control" placeholder="Email" type="email" name="loginEmail">
-            <input class="form-control" placeholder="Password" type="password" name="loginPassword">
-            <br/>
-            <button style="width: 100%" class="btn light-blue darken-3" type="submit" name="LoginSubmit" value="Login">Login&nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i></button>
-          </div>
-        </form>
-      </div>
-      </div>
-      <div id="register">{{>register}}</div>
-    </div>
-  </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p>Please login with your Email and Password, If you do not have an account yet please visit the <a href="/register" title="Register">register</a> page where you can create an account</p>
+                <form>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Email" type="email" name="email">
+                        <input class="form-control" placeholder="Password" type="password" name="password">
+                        <br />
+                        <button style="width: 100%" class="btn btn-primary" type="submit" name="submit" value="Login">Login&nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
 </template>

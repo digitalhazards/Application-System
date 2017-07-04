@@ -27,6 +27,6 @@ aldeed:collection2-core
 meteortoys:allthings
 alanning:roles
 cunneen:accounts-admin-materializecss
-jquery@1.11.10
+jquery
 dynamic-import
 bootswatch:cyborg
