@@ -5,242 +5,200 @@
 </template>
 <template name="admin">
 {{#if isAdminUser}}
-<script>$(".dropdown-button").dropdown();</script>
   <div class="container">
-    <div class="card">
-    <div class="card-tabs">
-      <ul class="tabs tabs-fixed-width">
-        <li class="tab"><a href="#cm" class="active">Crafting Magic</a></li>
-        <li class="tab"><a href="#mt">Medieval Times</a></li>
-        <li class="tab"><a href="#mr">Magic Revolution</a></li>
-        <li class="tab"><a href="#net">Network</a></li>
-      </ul>
-    </div>
-    <div class="card-content">
-      <div id="cm">
-        <div class="collection">
-        {{#each AllPendingCMApps}}
-        <a href="/app/cm/{{_id}}" class="collection-item"><span class="chip">{{ status }}</span>&nbsp;{{ ign }} Application</a>
+    <h4>Pending Network Apps</h4>
+    <div class="list-group">
+        {{#each AllPendingNetworkApps }}
+        <a href="/app/network/{{_id}}" class="list-group-item"><span class="label label-info">{{ status }}</span>&nbsp;{{ ign }} Application</a>
         {{/each}}
-      </div>
     </div>
-    <div id="mt">
-      <div class="collection">
-      {{#each AllPendingMTApps}}
-      <a href="/app/mt/{{_id}}" class="collection-item"><span class="chip">{{ status }}</span>&nbsp;{{ ign }} Application</a>
-      {{/each}}
+    <hr/>
+    <h4>Crafting Magic Pending Applications</h4>
+    <div class="list-group">
+        {{#each AllPendingCMApps }}
+        <a href="/app/cm/{{_id}}" class="list-group-item"><span class="label label-info">{{ status }}</span>&nbsp;{{ ign }} Application</a>
+        {{/each}}
     </div>
+    <hr/>
+    <h4>Magic Revolution Pending Applications</h4>
+    <div class="list-group">
+        {{#each AllPendingMRApps }}
+        <a href="/app/mr/{{_id}}" class="list-group-item"><span class="label label-info">{{ status }}</span>&nbsp;{{ ign }} Application</a>
+        {{/each}}
     </div>
-    <div id="mr">
-      <div class="collection">
-      {{#each AllPendingMRApps}}
-      <a href="/app/mr/{{_id}}" class="collection-item"><span class="chip">{{ status }}</span>&nbsp;{{ ign }} Application</a>
-      {{/each}}
+    <hr/>
+    <h4>Pending Medival Times Applications</h4>
+    <div class="list-group">
+        {{#each AllPendingMTApps }}
+        <a href="/app/mt/{{_id}}" class="list-group-item"><span class="label label-info">{{ status }}</span>&nbsp;{{ ign }} Application</a>
+        {{/each}}
     </div>
-    </div>
-    <div id="net">
-        <div class="collection">
-          {{#each AllPendingNetworkApps}}
-          <a href="/app/network/{{_id}}" class="collection-item"><span class="chip">{{ status }}</span>&nbsp;{{ ign }} Application</a>
-          {{/each}}
-        </div>
-    </div>
-  </div>
-
-  </div>
 </div>
-{{> js}}
+{{else}}
+    <div class="container">
+        <h1>403 - Access Denied</h1>
+    </div>
 {{/if}}
 </template>
 
 <template name="app_detail">
   {{#if isAdminUser}}
-  <div class="container">
-      <div class="row">
-     <div class="col s12 m12">
-       <div class="card blue-grey darken-1">
-         <div class="card-content white-text">
-           <span class="card-title">Network Application&nbsp;<div class="chip">{{ status }}</div></span>
-               <h5>IGN</h5>
-               <p>{{ ign }}</p>
-               <br/>
-               <h5>Discord Name</h5>
-               <p>{{ discordName }}</p>
-               <br/>
-               <h5>How long have you been a member at Digital Hazards?</h5>
-               <p>{{ memberlength }}</p>
-               <br/>
-               <h5>What languages do you know?</h5>
-               <p>{{ languageKnown }}</p>
-               <br/>
-               <h5>Why do you want to join the Network staff?</h5>
-               <p>{{ whyyou }}</p>
-         </div>
-         <div class="card-action" >
-           Submitted On:&nbsp;{{createdAt}}&nbsp;<span style="float: right;"><button class="btn green accept btn-small" ><i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;<button class="btn btn-small red reject"><i class="fa fa-ban" aria-hidden="true"></i></button></span>
-         </div>
-       </div>
-     </div>
-   </div>
-  </div>
+    <div class="container">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Network Application&nbsp;|&nbsp;{{status}}</div>
+                <div class="panel-body">
+                    <h5>IGN</h5>
+                    <p>{{ ign }}</p>
+                    <br />
+                    <h5>Discord Name</h5>
+                    <p>{{ discordName }}</p>
+                    <br />
+                    <h5>How long have you been a member at Digital Hazards?</h5>
+                    <p>{{ memberlength }}</p>
+                    <br />
+                    <h5>What languages do you know?</h5>
+                    <p>{{ languageKnown }}</p>
+                    <br />
+                    <h5>Why do you want to join the Network staff?</h5>
+                    <p>{{ whyyou }}</p>
+                </div>
+                <div class="panel-footer">Submitted On:&nbsp;{{createdAt}}<span class="pull-right"><button class="btn btn-sm accept btn-success" style="margin-top: -5px;">Accept&nbsp;<i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;<button class="btn btn-sm btn-danger reject" style="margin-top: -5px;">Reject&nbsp;<i class="fa fa-ban" aria-hidden="true"></i></button></span></div>
+            </div>
+        </div>
+    </div>
 {{/if}}
 </template>
 
 <template name="cm_app_detail">
   {{#if isAdminUser}}
-  <div class="container">
     <div class="container">
         <div class="row">
-       <div class="col s12 m12">
-         <div class="card blue-grey darken-1">
-           <div class="card-content white-text">
-             <span class="card-title">Crafting Magic Application&nbsp;<div class="chip">{{ status }}</div></span>
-                 <h5>Minecraft IGN (In-Game Name)</h5>
-                 <p>{{ ign }}</p>
-                 <br/>
-                 <h5>What is your Discord Name</h5>
-                 <p>{{ discordName }}</p>
-                 <br/>
-                 <h5>How old are you?</h5>
-                 <p>{{ age }}</p>
-                 <br/>
-                 <h5>How long have you been playing?</h5>
-                 <p>{{ memberlength }}</p>
-                 <br/>
-                 <h5>How often are you online?</h5>
-                 <p>{{ playtime }}</p>
-                 <br/>
-                 <h5>Which server do you play on?</h5>
-                 <p>{{ serverNumber }}</p>
-                 <br/>
-                 <h5>What mods do you 'major' in?</h5>
-                 <p>{{ modMajors }}</p>
-                 <br/>
-                 <h5>You see someone being racist in chat, how do you handle it?</h5>
-                 <p>{{ scenarioRacist }}</p>
-                 <br/>
-                 <h5>Someone is asking for creatively spawned in items, how do you handle it?</h5>
-                 <p>{{ scenarioSpawn }}</p>
-                 <br/>
-                 <h5>What servers have you staffed before?</h5>
-                 <p>{{ previousStaff }}</p>
-                 <br/>
-                 <h5>Why do you want to join the Network staff?</h5>
-                 <p>{{ whyyou }}</p>
-           </div>
-           <div class="card-action" >
-             Submitted On:&nbsp;{{createdAt}}&nbsp;<span style="float: right;"><button class="btn green accept btn-small" ><i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;<button class="btn btn-small red reject"><i class="fa fa-ban" aria-hidden="true"></i></button></span>
-           </div>
-         </div>
-       </div>
-     </div>
-    </div>
-  </div>
-  {{ else }}
-  <h3>403</h3>
-  {{/if}}
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Crafting Magic Application&nbsp;|&nbsp;{{status}}</div>
+                    <div class="panel-body">
+                        <h5>Minecraft IGN (In-Game Name)</h5>
+                        <p>{{ ign }}</p>
+                        <br />
+                        <h5>What is your Discord Name</h5>
+                        <p>{{ discordName }}</p>
+                        <br />
+                        <h5>How old are you?</h5>
+                        <p>{{ age }}</p>
+                        <br />
+                        <h5>How long have you been playing?</h5>
+                        <p>{{ memberlength }}</p>
+                        <br />
+                        <h5>How often are you online?</h5>
+                        <p>{{ playtime }}</p>
+                        <br />
+                        <h5>Which server do you play on?</h5>
+                        <p>{{ serverNumber }}</p>
+                        <br />
+                        <h5>What mods do you 'major' in?</h5>
+                        <p>{{ modMajors }}</p>
+                        <br />
+                        <h5>You see someone being racist in chat, how do you handle it?</h5>
+                        <p>{{ scenarioRacist }}</p>
+                        <br />
+                        <h5>Someone is asking for creatively spawned in items, how do you handle it?</h5>
+                        <p>{{ scenarioSpawn }}</p>
+                        <br />
+                        <h5>What servers have you staffed before?</h5>
+                        <p>{{ previousStaff }}</p>
+                        <br />
+                        <h5>Why do you want to join the Network staff?</h5>
+                        <p>{{ whyyou }}</p>
+                    </div>
+                    <div class="panel-footer">Submitted On:&nbsp;{{createdAt}}<span class="pull-right"><button class="btn btn-sm accept btn-success" style="margin-top: -5px;">Accept&nbsp;<i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;<button class="btn btn-sm btn-danger reject" style="margin-top: -5px;">Reject&nbsp;<i class="fa fa-ban" aria-hidden="true"></i></button></span></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        {{ else }}
+        <h3>403</h3>
+        {{/if}}
 </template>
 <template name="mt_app_detail">
   {{#if isAdminUser}}
-  <div class="container">
-      <div class="row">
-     <div class="col s12 m12">
-       <div class="card blue-grey darken-1">
-         <div class="card-content white-text">
-           <span class="card-title">Medieval Times Application&nbsp;<div class="chip">{{ status }}</div></span>
-               <h5>Minecraft IGN (In-Game Name)</h5>
-               <p>{{ ign }}</p>
-               <br/>
-               <h5>What is your Discord Name</h5>
-               <p>{{ discordName }}</p>
-               <br/>
-               <h5>How old are you?</h5>
-               <p>{{ age }}</p>>
-               <br/>
-               <h5>How long have you been playing?</h5>
-               <p>{{ memberlength }}</p>
-               <br/>
-               <h5>How often are you online?</h5>
-               <p>{{ playtime }}</p>
-               <br/>
-               <h5>What servers have you staffed before?</h5>
-               <p>{{ previousStaff }}</p>
-               <br/>
-               <h5>Why should we allow you to be a staff member?</h5>
-               <p>{{ whyyou }}</p>
-         </div>
-         <div class="card-action" >
-           Submitted On:&nbsp;{{createdAt}}&nbsp;<span style="float: right;"><button class="btn green accept btn-small" ><i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;<button class="btn btn-small red reject"><i class="fa fa-ban" aria-hidden="true"></i></button></span>
-         </div>
-       </div>
-     </div>
-   </div>
-  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Medieval Times Application&nbsp;|&nbsp;{{status}}</div>
+                    <div class="panel-body">
+                        <h5>Minecraft IGN (In-Game Name)</h5>
+                        <p>{{ ign }}</p>
+                        <br />
+                        <h5>What is your Discord Name</h5>
+                        <p>{{ discordName }}</p>
+                        <br />
+                        <h5>How old are you?</h5>
+                        <p>{{ age }}</p>>
+                        <br />
+                        <h5>How long have you been playing?</h5>
+                        <p>{{ memberlength }}</p>
+                        <br />
+                        <h5>How often are you online?</h5>
+                        <p>{{ playtime }}</p>
+                        <br />
+                        <h5>What servers have you staffed before?</h5>
+                        <p>{{ previousStaff }}</p>
+                        <br />
+                        <h5>Why should we allow you to be a staff member?</h5>
+                        <p>{{ whyyou }}</p>
+                    </div>
+                    <div class="panel-footer">Submitted On:&nbsp;{{createdAt}}<span class="pull-right"><button class="btn btn-sm accept btn-success" style="margin-top: -5px;">Accept&nbsp;<i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;<button class="btn btn-sm btn-danger reject" style="margin-top: -5px;">Reject&nbsp;<i class="fa fa-ban" aria-hidden="true"></i></button></span></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        {{ else }}
+        <h3>403</h3>
+        {{/if}}
+</template>
+
+<template name="mr_app_detail">
+  {{#if isAdminUser}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Magic Revolution Application&nbsp;|&nbsp;{{status}}</div>
+                    <div class="panel-body">
+                        <h5>Minecraft IGN (In-Game Name)</h5>
+                        <p>{{ ign }}</p>
+                        <br />
+                        <h5>What is your Discord Name</h5>
+                        <p>{{ discordName }}</p>
+                        <br />
+                        <h5>How old are you?</h5>
+                        <p>{{ age }}</p>>
+                        <br />
+                        <h5>How long have you been playing?</h5>
+                        <p>{{ memberlength }}</p>
+                        <br />
+                        <h5>How often are you online?</h5>
+                        <p>{{ playtime }}</p>
+                        <br />
+                        <h5>What servers have you staffed before?</h5>
+                        <p>{{ previousStaff }}</p>
+                        <br />
+                        <h5>Why should we allow you to be a staff member?</h5>
+                        <p>{{ whyyou }}</p>
+                    </div>
+                    <div class="panel-footer">Submitted On:&nbsp;{{createdAt}}<span class="pull-right"><button class="btn btn-sm accept btn-success" style="margin-top: -5px;">Accept&nbsp;<i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;<button class="btn btn-sm btn-danger reject" style="margin-top: -5px;">Reject&nbsp;<i class="fa fa-ban" aria-hidden="true"></i></button></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
   {{ else }}
   <h3>403</h3>
   {{/if}}
 </template>
 
-<template name="mr_app_detail">
-  {{#if isAdminUser}}
-  <div class="container">
-      <div class="row">
-     <div class="col s12 m12">
-       <div class="card blue-grey darken-1">
-         <div class="card-content white-text">
-           <span class="card-title">Magic Revolution Application&nbsp;<div class="chip">{{ status }}</div></span>
-               <h5>Minecraft IGN (In-Game Name)</h5>
-               <p>{{ ign }}</p>
-               <br/>
-               <h5>What is your Discord Name</h5>
-               <p>{{ discordName }}</p>
-               <br/>
-               <h5>How old are you?</h5>
-               <p>{{ age }}</p>>
-               <br/>
-               <h5>How long have you been playing?</h5>
-               <p>{{ memberlength }}</p>
-               <br/>
-               <h5>How often are you online?</h5>
-               <p>{{ playtime }}</p>
-               <br/>
-               <h5>What servers have you staffed before?</h5>
-               <p>{{ previousStaff }}</p>
-               <br/>
-               <h5>Why should we allow you to be a staff member?</h5>
-               <p>{{ whyyou }}</p>
-         </div>
-         <div class="card-action" >
-           Submitted On:&nbsp;{{createdAt}}&nbsp;<span style="float: right;"><button class="btn green accept btn-small" ><i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;<button class="btn btn-small red reject"><i class="fa fa-ban" aria-hidden="true"></i></button></span>
-         </div>
-       </div>
-     </div>
-   </div>
-  </div>
-  {{ else }}
-  <h3>403</h3>
-  {{/if}}
-</template>
+
 <template name="search">
-  <div class="container">
-    <div class="row">
-   <div class="col s12 m12">
-     <div class="card blue-grey darken-1">
-       <div class="card-content white-text">
-         <span class="card-title">Search apps by IGN</span>
-          <div class="input-field">
-            <form>
-        <div class="input-field">
-          <input id="search" type="search" required>
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
-        </div>
-      </form>
-          </div>
-       </div>
-      
-     </div>
-   </div>
- </div>
- </div>
+  
 </template>
