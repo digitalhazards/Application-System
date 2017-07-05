@@ -14,6 +14,8 @@ Template.MTApp.events({
   }
 })
 
+
+
 Template.MRApp.events({
   'submit form': function (e, t) {
     Router.go('/me/applications');

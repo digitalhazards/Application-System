@@ -5,34 +5,44 @@
 </template>
 <template name="admin">
 {{#if isAdminUser}}
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="/search">Search by IGN</a></li>
+        </ul>
+    </div>
   <div class="container">
-    <h4>Pending Network Apps</h4>
-    <div class="list-group">
-        {{#each AllPendingNetworkApps }}
-        <a href="/app/network/{{_id}}" class="list-group-item"><span class="label label-info">{{ status }}</span>&nbsp;{{ ign }} Application</a>
-        {{/each}}
+    <div class="col-md-8">
+        <h4>Pending Network Apps</h4>
+        <div class="list-group">
+            {{#each AllPendingNetworkApps }}
+            <a href="/app/network/{{_id}}" class="list-group-item"><span class="label label-info">{{ status }}</span>&nbsp;{{ ign }} Application</a>
+            {{/each}}
+        </div>
+        <hr />
+        <h4>Crafting Magic Pending Applications</h4>
+        <div class="list-group">
+            {{#each AllPendingCMApps }}
+            <a href="/app/cm/{{_id}}" class="list-group-item"><span class="label label-info">{{ status }}</span>&nbsp;{{ ign }} Application</a>
+            {{/each}}
+        </div>
+        <hr />
+        <h4>Magic Revolution Pending Applications</h4>
+        <div class="list-group">
+            {{#each AllPendingMRApps }}
+            <a href="/app/mr/{{_id}}" class="list-group-item"><span class="label label-info">{{ status }}</span>&nbsp;{{ ign }} Application</a>
+            {{/each}}
+        </div>
+        <hr />
+        <h4>Pending Medival Times Applications</h4>
+        <div class="list-group">
+            {{#each AllPendingMTApps }}
+            <a href="/app/mt/{{_id}}" class="list-group-item"><span class="label label-info">{{ status }}</span>&nbsp;{{ ign }} Application</a>
+            {{/each}}
+        </div>
     </div>
-    <hr/>
-    <h4>Crafting Magic Pending Applications</h4>
-    <div class="list-group">
-        {{#each AllPendingCMApps }}
-        <a href="/app/cm/{{_id}}" class="list-group-item"><span class="label label-info">{{ status }}</span>&nbsp;{{ ign }} Application</a>
-        {{/each}}
-    </div>
-    <hr/>
-    <h4>Magic Revolution Pending Applications</h4>
-    <div class="list-group">
-        {{#each AllPendingMRApps }}
-        <a href="/app/mr/{{_id}}" class="list-group-item"><span class="label label-info">{{ status }}</span>&nbsp;{{ ign }} Application</a>
-        {{/each}}
-    </div>
-    <hr/>
-    <h4>Pending Medival Times Applications</h4>
-    <div class="list-group">
-        {{#each AllPendingMTApps }}
-        <a href="/app/mt/{{_id}}" class="list-group-item"><span class="label label-info">{{ status }}</span>&nbsp;{{ ign }} Application</a>
-        {{/each}}
-    </div>
+      <div class="col-md-4">
+          Rently accept/reject log.
+      </div>
 </div>
 {{else}}
     <div class="container">

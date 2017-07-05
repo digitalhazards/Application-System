@@ -26,7 +26,8 @@ blaze
 aldeed:collection2-core
 meteortoys:allthings
 alanning:roles
-cunneen:accounts-admin-materializecss
 jquery
 dynamic-import
 bootswatch:cyborg
+mrt:accounts-admin-ui-bootstrap-3
+easy:search

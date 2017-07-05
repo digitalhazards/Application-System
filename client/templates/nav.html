@@ -41,6 +41,9 @@
                         {{#if isManagerUser}}
                         <li><a href="/admin">Admin</a></li>
                         {{/if}}
+                        {{#if isSuperAdmin }}
+                        <li><a href="/admin/manage">Manager</a></li>
+                        {{/if}}
                     </ul>
                 </div>
             </div>
