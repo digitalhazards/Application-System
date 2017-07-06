@@ -11,4 +11,4 @@ Todo:
 - [ ] Email notifications
 - [ ] Add managers to front page w/ links
 - [ ] Hidden var for player apps
-
+- [ ] Validation errors (did not complete whole form)

@@ -11,3 +11,15 @@ body {
     height: 5px;
     width: 100%;
 }
+textarea {
+    background: rgba(255,255,255,0.2) !important;
+    color: #fafafa !important;
+}
+input {
+    background: rgba(255,255,255,0.2) !important;
+    color: #fafafa !important;
+}
+select {
+    background: rgba(255,255,255,0.2) !important;
+    color: #fafafa !important;
+}
