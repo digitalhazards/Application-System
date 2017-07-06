@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client",
+    "\\client\\js",
+    "\\client\\templates",
+    "\\collections",
+    "\\lib",
+    "\\public",
+    "\\public\\glyph",
+    "\\public\\img",
+    "\\server"
+  ],
+  "SelectedNode": "\\collections\\search.js",
+  "PreviewInSolutionExplorer": false
+}
