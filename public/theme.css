@@ -1,0 +1,13 @@
+body {
+    background: url("/img/bg.jpg");
+    background-repeat: repeat;
+}
+.navbar-default {
+    background: rgba(6,6,6,0.8);
+    border: 0px solid black;
+}
+.top_bar {
+    background: #00A8FF;
+    height: 5px;
+    width: 100%;
+}
