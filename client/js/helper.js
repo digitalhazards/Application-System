@@ -12,6 +12,16 @@ Template.nav.helpers({
     },
     isManagerUser: function() {
         return Roles.userIsInRole(Meteor.user(), ['admin']);
+    },
+    isSuperAdmin: function () {
+        return Roles.userIsInRole(Meteor.user(), ['superadmin']);
+    }
+});
+
+
+Template.superadmin.helpers({
+    isSuperAdmin: function () {
+        return Roles.userIsInRole(Meteor.user(), ['superadmin']);
     }
 });
 
@@ -72,8 +82,11 @@ Template.admin.helpers({
       return Roles.userIsInRole(Meteor.user(), ['superadmin']);
     }
 });
-Template.searchApp.helpers({
-  
+
+Template.byIGN.helpers({
+    isAdminUser: function () {
+        return Roles.userIsInRole(Meteor.user(), ['admin']);
+    },
 });
 
 Template.app_detail.helpers({

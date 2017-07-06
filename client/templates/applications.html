@@ -1,31 +1,30 @@
 <template name="NetworkApplication">
     <div class="container-app">
         {{#if currentUser}}
-        <div class="jumbotron">
             <div style="padding: 0% 20%;">
               <h3>Network Application</h3>
+                <hr />
                 {{#autoForm collection="NetworkApp" id="insertNetworkApp" type="insert" class="new-network-app" }}
-                <div class="input-field">
+                <div class="form-group">
                   {{> afQuickField name="ign"}}
                 </div>
-                <div class="input-field">
+                <div class="form-group">
                   {{> afQuickField name="discordName"}}
                 </div>
-                <div class="input-field">
+                <div class="form-group">
                   {{> afQuickField name="memberlength"}}
                 </div>
-                <div class="input-field">
+                <div class="form-group">
                   {{> afQuickField name="languageKnown"}}
                 </div>
-                <div class="input-field">
+                <div class="form-group">
                   {{> afQuickField name="whyyou"}}
                 </div>
-                <button type="submit" class="btn light-blue darken-3">Apply</button>
+                <button type="submit" style="width:100%" class="btn btn-success">Apply</button>
 
               {{/autoForm}}
             </div>
-            <script>$("textarea").addClass('materialize-textarea');</script>
-        </div>
+  
             {{else}}
             <div class="card-content white-text">
               <span class="card-title">You are not Logged in!</span>
@@ -38,52 +37,47 @@
 <template name="CMModApp">
   <div class="container-app">
       {{#if currentUser}}
-      <div class="jumbotron">
           <div style="padding: 0% 20%;">
             <h3>Crafting Magic Application</h3>
+              <hr/>
               {{#autoForm collection="CMApp" id="insertCMApp" type="insert" class="new-cm-app" }}
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="ign"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="discordName"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="age"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="memberlength"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="playtime"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="serverNumber"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="modMajors"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="scenarioRacist"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="scenarioSpawn"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="previousStaff"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="whyyou"}}
               </div>
-              <button type="submit" class="btn light-blue darken-3">Apply</button>
+              <button type="submit" style="width:100%" class="btn btn-success">Apply</button>
               {{/autoForm}}
-              <script>
-              $("textarea").addClass('materialize-textarea');
-              $('select').material_select();
-              </script>
 
           </div>
-      </div>
           {{else}}
               <div class="card-content white-text">
                 <span class="card-title">You are not Logged in!</span>
@@ -96,38 +90,34 @@
 <template name="MTApp">
   <div class="container-app">
       {{#if currentUser}}
-      <div class="jumbotron">
           <div style="padding: 0% 20%;">
             <h3>Medieval Times Application</h3>
+              <hr/>
               {{#autoForm collection="MTApp" id="insertMTApp" type="insert" class="new-mt-app" }}
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="ign"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="discordName"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="age"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="memberlength"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="playtime"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="previousStaff"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="whyyou"}}
               </div>
-              <button type="submit" class="btn light-blue darken-3">Apply</button>
+              <button type="submit" style="width:100%"  class="btn btn-success">Apply</button>
               {{/autoForm}}
-              <script>
-              $("textarea").addClass('materialize-textarea');
-              </script>
           </div>
-      </div>
           {{else}}
           <div class="card-content white-text">
             <span class="card-title">You are not Logged in!</span>
@@ -140,38 +130,34 @@
 <template name="MRApp">
   <div class="container-app">
       {{#if currentUser}}
-      <div class="jumbotron">
           <div style="padding: 0% 20%;">
             <h3>Magic Revolution Application</h3>
+              <hr/>
               {{#autoForm collection="MRApp" id="insertMRApp" type="insert" class="new-mr-app" }}
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="ign"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="discordName"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="age"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="memberlength"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="playtime"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="previousStaff"}}
               </div>
-              <div class="input-field">
+              <div class="form-group">
                 {{> afQuickField name="whyyou"}}
               </div>
-              <button type="submit" class="btn light-blue darken-3">Apply</button>
+              <button type="submit" style="width:100%" class="btn btn-success">Apply</button>
               {{/autoForm}}
-              <script>
-              $("textarea").addClass('materialize-textarea');
-              </script>
           </div>
-      </div>
           {{else}}
           <div class="card-content white-text">
             <span class="card-title">You are not Logged in!</span>

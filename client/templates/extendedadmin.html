@@ -1,0 +1,14 @@
+<template name="byIGN">
+    {{#if isAdminUser }}
+    <div class="container">
+        <form>
+            <div class="input-group">
+                {{> EasySearch.Input index=ignIndex }}
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Go!</button>
+                </span>
+            </div>
+        </form>
+    </div>
+    {{/if}}
+</template>
