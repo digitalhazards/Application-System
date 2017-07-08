@@ -29,3 +29,11 @@ Meteor.publish('MRApps', function (group) {
       return MRApp.find({applicant: this.userId});
     }
 });
+
+Meteor.publish('logs', function (group) {
+    if (Roles.userIsInRole(this.userId, ['admin'], group)) {
+        return logs.find({});
+    } else {
+        return false;
+    }
+});

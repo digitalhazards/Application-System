@@ -53,6 +53,9 @@ Template.admin.helpers({
     AllNetworkApps: ()=> {
         return NetworkApp.find({});
     },
+    logs: () => {
+        return logs.find({});
+    },
     AllPendingNetworkApps: ()=> {
       return NetworkApp.find({status: "Pending"});
     },
@@ -112,10 +115,3 @@ Template.mr_app_detail.helpers({
     }
 });
 
-
-Template.adminui.helpers({
-    // check if user is an admin
-    isAdminUser: function() {
-        return Roles.userIsInRole(Meteor.user(), ['admin']);
-    },
-});

@@ -2,6 +2,11 @@
     <div class="container">
         {{#if isSuperAdmin }}
         {{> accountsAdmin}}
+        {{else}}
+        <div class="container">
+            <h4>Whoops! You stumbled somewhere you don't belong.</h4>
+            <p>If you think this is a problem let Fonix or i3itCoin know :)</p>
+        </div>
         {{/if}}
     </div>
  

@@ -16,7 +16,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="/">Home</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Apply <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" onclick="$('.dropdown-toggle').dropdown();" data-toggle="dropdown" role="button" aria-expanded="false">Apply <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="/apply/network">Network Jobs</a></li>
                                 <li><a href="/apply/cm">Crafting Magic</a></li>
@@ -28,22 +28,24 @@
                     <ul class="nav navbar-nav navbar-right">
                         {{#if currentUser}}
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ign}} <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onclick="$('.dropdown-toggle').dropdown();" >{{ign}} <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="/me">My Applications</a></li>
                                 <li><span class="divider"></span></li>
                                 <li><a class="logout" style="color: #ff0000" href="#">Logout</a></li>
                             </ul>
                         </li>
-                        {{else}}
-                        <li><a href="/login">Login</a></li>
-                        {{/if}}
                         {{#if isManagerUser}}
                         <li><a href="/admin">Admin</a></li>
                         {{/if}}
                         {{#if isSuperAdmin }}
                         <li><a href="/admin/manage">Manager</a></li>
+                        
                         {{/if}}
+                        {{else}}
+                        <li><a href="/login">Login</a></li>
+                        {{/if}}
+                       
                     </ul>
                 </div>
             </div>

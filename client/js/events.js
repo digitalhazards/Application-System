@@ -14,8 +14,6 @@ Template.MTApp.events({
   }
 })
 
-
-
 Template.MRApp.events({
   'submit form': function (e, t) {
     Router.go('/me/applications');
@@ -28,12 +26,18 @@ Template.app_detail.events({
       NetworkApp.update(this._id, {$set:{
         status: "Accepted"
       }});
+      logs.insert({
+          "text": Meteor.user().profile.ign + " just accepted " + this.ign + "'s Network application.",
+      })
   },
   'click .reject': function (e, t) {
     console.log("Reject");
     NetworkApp.update(this._id, {$set:{
       status: "Rejected"
     }});
+    logs.insert({
+        "text": Meteor.user().profile.ign + " just rejected " + this.ign + "'s Network application.",
+    })
   }
 })
 
@@ -43,12 +47,18 @@ Template.cm_app_detail.events({
       CMApp.update(this._id, {$set:{
         status: "Accepted"
       }});
+      logs.insert({
+          "text": Meteor.user().profile.ign + " just accepted " + this.ign + "'s Crafting Magic application.",
+      })
   },
   'click .reject': function (e, t) {
     console.log("Reject");
     CMApp.update(this._id, {$set:{
       status: "Rejected"
     }});
+    logs.insert({
+        "text": Meteor.user().profile.ign + " just rejected " + this.ign + "'s Crafting Magic application.",
+    })
   }
 })
 
@@ -58,12 +68,18 @@ Template.mr_app_detail.events({
       MRApp.update(this._id, {$set:{
         status: "Accepted"
       }});
+      logs.insert({
+          "text": Meteor.user().profile.ign + " just accepted " + this.ign + "'s Magic Revolution application.",
+      })
   },
   'click .reject': function (e, t) {
     console.log("Reject");
     MRApp.update(this._id, {$set:{
       status: "Rejected"
     }});
+    logs.insert({
+        "text": Meteor.user().profile.ign + " just rejected " + this.ign + "'s Magic Revolution application.",
+    })
   }
 })
 
@@ -73,12 +89,18 @@ Template.mt_app_detail.events({
       MTApp.update(this._id, {$set:{
         status: "Accepted"
       }});
+      logs.insert({
+          "text": Meteor.user().profile.ign + " just accepted " + this.ign + "'s Medieval Times application.",
+      })
   },
   'click .reject': function (e, t) {
     console.log("Reject");
     MTApp.update(this._id, {$set:{
       status: "Rejected"
     }});
+    logs.insert({
+        "text": Meteor.user().profile.ign + " just rejected " + this.ign + "'s Medieval Times application.",
+    })
   }
 })
 
