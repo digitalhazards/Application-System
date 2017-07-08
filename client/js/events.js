@@ -20,6 +20,15 @@ Template.MRApp.events({
   }
 })
 
+Template.admin.events({
+    'click .clearLogs': function () {
+        Meteor.call('logs.clearlog', {
+            collection: "logs"
+        })
+    }
+})
+
+
 Template.app_detail.events({
   'click .accept': function (doc) {
     console.log("Accept");

@@ -53,6 +53,9 @@ Template.admin.helpers({
     AllNetworkApps: ()=> {
         return NetworkApp.find({});
     },
+    isSuperAdmin: function () {
+        return Roles.userIsInRole(Meteor.user(), ['superadmin']);
+    },
     logs: () => {
         return logs.find({});
     },
