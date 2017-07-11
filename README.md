@@ -2,6 +2,7 @@
 
 Digital Hazards Staff Application System.
 
+Current Build: v1.0
 
 Todo:
 --
